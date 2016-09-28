@@ -19,10 +19,16 @@ description: > # this means to ignore newlines until "baseurl:"
   An OS and apps built with modern design and features.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://liri.io" # the base hostname & protocol for your site
-twitter_username: lirilinux
-github_username:  lirios
-googleplus_page: 100355783508323292342
-googleplus_community: 115722443491803015565
+github:
+  repo: "https://github.com/lirios/lirios.github.io"
+social:
+  github: lirios
+  googleplus:
+    page: 100355783508323292342
+    community: 115722443491803015565
+  twitter:
+  facebook:
+  youtube:
 
 # Build settings
 markdown: kramdown

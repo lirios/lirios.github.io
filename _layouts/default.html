@@ -59,12 +59,14 @@
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">Social</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            {% if site.social.github %}<li><a class="white-text" href="https://github.com/{{ site.social.github }}">GitHub</a></li>{% endif %}
+            {% if site.social.googleplus.page %}<li><a class="white-text" href="https://plus.google.com/u/0/{{ site.social.googleplus.page }}">Google+ Page</a></li>{% endif %}
+            {% if site.social.googleplus.community %}<li><a class="white-text" href="https://plus.google.com/u/0/communities/{{ site.social.googleplus.community }}">Google+ Community</a></li>{% endif %}
+            {% if site.social.youtube %}<li><a class="white-text" href="https://www.youtube.com/channel/{{ site.social.youtube }}">YouTube</a></li>{% endif %}
+            {% if site.social.facebook %}<li><a class="white-text" href="https://www.facebook.com/{{ site.social.facebook }}">Facebook</a></li>{% endif %}
+            {% if site.social.twitter %}<li><a class="white-text" href="https://twitter.com/{{ site.social.twitter }}">Twitter</a></li>{% endif %}
           </ul>
         </div>
       </div>

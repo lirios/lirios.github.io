@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: Liri
+email: info@liri.io
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  An OS and apps built with modern design and features.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://liri.io" # the base hostname & protocol for your site
+twitter_username: lirilinux
+github_username:  lirios
+googleplus_page: 100355783508323292342
+googleplus_community: 115722443491803015565
 
 # Build settings
 markdown: kramdown

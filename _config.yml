@@ -29,6 +29,35 @@ social:
   twitter:
   facebook:
   youtube:
+team:
+  - name: Pier Luigi Fiorini
+    occupation: Software developer
+    location: Italy
+    avatar: images/avatars/avatar_pier.png
+    twitter: https://twitter.com/@plfiorini
+    googleplus: https://plus.google.com/+PierLuigiFiorini
+    github: https://github.com/plfiorini
+  - name: Micheal Spencer
+    occupation: Software developer and CS student
+    location: USA
+    avatar: images/avatars/avatar_michael.jpg
+    twitter: https://twitter.com/iBeliever316
+    googleplus: https://plus.google.com/+MichaelSpencer
+    github: https://github.com/iBeliever
+  - name: Tim Süberkrüb
+    occupation: Student
+    location: Germany
+    avatar: images/avatars/avatar_tim.png
+    twitter: https://twitter.com/@TimSueberkrueb
+    googleplus: https://plus.google.com/+TimS%C3%BCberkr%C3%BCbDE/
+    github: https://github.com/tim-sueberkrueb/
+  - name: Pierre Jacquier
+    occupation: Student at UTBM
+    location: France
+    avatar: images/avatars/avatar_pierre.jpg
+    twitter: https://twitter.com/PierreJacquier
+    googleplus: https://plus.google.com/+PierreJacquierFR/
+    github: https://github.com/pierremtb
 
 # Build settings
 markdown: kramdown

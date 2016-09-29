@@ -52,3 +52,18 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+article.page {
+  margin: 0;
+  padding: 0;
+
+  header {
+    padding: 1rem;
+    margin-bottom: 15px;
+    width: 100%;
+
+    h1 {
+      font-weight: 200;
+    }
+  }
+}

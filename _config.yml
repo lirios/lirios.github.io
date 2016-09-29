@@ -70,3 +70,5 @@ team:
 # Build settings
 markdown: kramdown
 theme: minima
+gem:
+  - jekyll-sitemap

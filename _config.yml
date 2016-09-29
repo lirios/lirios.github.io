@@ -19,9 +19,16 @@ description: > # this means to ignore newlines until "baseurl:"
   An OS and apps built with modern design and features.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://liri.io" # the base hostname & protocol for your site
+logo: "/images/logo.png"
+social:
+  links:
+    - https://github.com/lirios
+    - https://plus.google.com/u/0/100355783508323292342
+    - https://plus.google.com/u/0/communities/115722443491803015565
+google_site_verification: true
 github:
   repo: "https://github.com/lirios/lirios.github.io"
-social:
+social_networks:
   github: lirios
   googleplus:
     page: 100355783508323292342
@@ -29,46 +36,10 @@ social:
   twitter:
   facebook:
   youtube:
-team:
-  - name: Pier Luigi Fiorini
-    occupation: Software developer
-    location: Italy
-    avatar: images/avatars/avatar_pier.png
-    twitter: https://twitter.com/@plfiorini
-    googleplus: https://plus.google.com/+PierLuigiFiorini
-    github: https://github.com/plfiorini
-  - name: Micheal Spencer
-    occupation: Software developer and CS student
-    location: USA
-    avatar: images/avatars/avatar_michael.jpg
-    twitter: https://twitter.com/iBeliever316
-    googleplus: https://plus.google.com/+MichaelSpencer
-    github: https://github.com/iBeliever
-  - name: Tim Süberkrüb
-    occupation: Student
-    location: Germany
-    avatar: images/avatars/avatar_tim.png
-    twitter: https://twitter.com/@TimSueberkrueb
-    googleplus: https://plus.google.com/+TimS%C3%BCberkr%C3%BCbDE/
-    github: https://github.com/tim-sueberkrueb/
-  - name: Pierre Jacquier
-    occupation: Student at UTBM
-    location: France
-    avatar: images/avatars/avatar_pierre.jpg
-    twitter: https://twitter.com/PierreJacquier
-    googleplus: https://plus.google.com/+PierreJacquierFR/
-    github: https://github.com/pierremtb
-  - name: Andrew Penkrat
-    location: Russia
-  - name: Nick Germaine
-    location: Canada
-  - name: Pierre-Yves Siret
-    location: France
-  - name: Ziga Patacko Koderman
-    location: Slovenia
 
 # Build settings
 markdown: kramdown
 theme: minima
 gem:
   - jekyll-sitemap
+  - jekyll-seo-tag

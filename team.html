@@ -5,13 +5,13 @@ permalink: /team/
 ---
 
 <div class="row">
-    {% for member in site.team %}
+    {% for member in site.data.authors %}
         <div class="col s12 m6">
             <div class="card">
                 <div class="card-content">
                     <div class="row">
                         <div class="col">
-                            <img class="circle responsive-img" width="100" height="100" src="{{ site.baseurl }}/{{ member.avatar }}">
+                            <img class="circle responsive-img" width="100" height="100" src="{{ site.baseurl }}{{ member.picture }}">
                         </div>
                         <div class="col">
                             <span class="card-title">{{ member.name }}</span>
@@ -20,9 +20,9 @@ permalink: /team/
                     </div>
                 </div>
                 <div class="card-action">
-                    {% if member.twitter %}<a href="{{ member.twitter }}"><i class="fa fa-2x fa-twitter"></i></a>{% endif %}
-                    {% if member.googleplus %}<a href="{{ member.googleplus }}"><i class="fa fa-2x fa-google-plus"></i></a>{% endif %}
-                    {% if member.github %}<a href="{{ member.github }}"><i class="fa fa-2x fa-github"></i></a>{% endif %}
+                    {% if member.twitter %}<a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-2x fa-twitter"></i></a>{% endif %}
+                    {% if member.googleplus %}<a href="https://plus.google.com/{{ member.googleplus }}"><i class="fa fa-2x fa-google-plus"></i></a>{% endif %}
+                    {% if member.github %}<a href="https://github.com/{{ member.github }}"><i class="fa fa-2x fa-github"></i></a>{% endif %}
                 </div>
             </div>
         </div>

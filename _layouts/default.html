@@ -16,6 +16,8 @@
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+  {% seo %}
 </head>
 
 <body>
@@ -66,12 +68,12 @@
         <div class="col l3 s12">
           <h5 class="white-text">Social</h5>
           <ul>
-            {% if site.social.github %}<li><a class="white-text" href="https://github.com/{{ site.social.github }}">GitHub</a></li>{% endif %}
-            {% if site.social.googleplus.page %}<li><a class="white-text" href="https://plus.google.com/u/0/{{ site.social.googleplus.page }}">Google+ Page</a></li>{% endif %}
-            {% if site.social.googleplus.community %}<li><a class="white-text" href="https://plus.google.com/u/0/communities/{{ site.social.googleplus.community }}">Google+ Community</a></li>{% endif %}
-            {% if site.social.youtube %}<li><a class="white-text" href="https://www.youtube.com/channel/{{ site.social.youtube }}">YouTube</a></li>{% endif %}
-            {% if site.social.facebook %}<li><a class="white-text" href="https://www.facebook.com/{{ site.social.facebook }}">Facebook</a></li>{% endif %}
-            {% if site.social.twitter %}<li><a class="white-text" href="https://twitter.com/{{ site.social.twitter }}">Twitter</a></li>{% endif %}
+            {% if site.social_networks.github %}<li><a class="white-text" href="https://github.com/{{ site.social_networks.github }}">GitHub</a></li>{% endif %}
+            {% if site.social_networks.googleplus.page %}<li><a class="white-text" href="https://plus.google.com/u/0/{{ site.social_networks.googleplus.page }}">Google+ Page</a></li>{% endif %}
+            {% if site.social_networks.googleplus.community %}<li><a class="white-text" href="https://plus.google.com/u/0/communities/{{ site.social_networks.googleplus.community }}">Google+ Community</a></li>{% endif %}
+            {% if site.social_networks.youtube %}<li><a class="white-text" href="https://www.youtube.com/channel/{{ site.social_networks.youtube }}">YouTube</a></li>{% endif %}
+            {% if site.social_networks.facebook %}<li><a class="white-text" href="https://www.facebook.com/{{ site.social_networks.facebook }}">Facebook</a></li>{% endif %}
+            {% if site.social_networks.twitter %}<li><a class="white-text" href="https://twitter.com/{{ site.social_networks.twitter }}">Twitter</a></li>{% endif %}
           </ul>
         </div>
       </div>

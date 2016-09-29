@@ -58,6 +58,14 @@ team:
     twitter: https://twitter.com/PierreJacquier
     googleplus: https://plus.google.com/+PierreJacquierFR/
     github: https://github.com/pierremtb
+  - name: Andrew Penkrat
+    location: Russia
+  - name: Nick Germaine
+    location: Canada
+  - name: Pierre-Yves Siret
+    location: France
+  - name: Ziga Patacko Koderman
+    location: Slovenia
 
 # Build settings
 markdown: kramdown

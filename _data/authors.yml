@@ -1,7 +1,5 @@
 - plfiorini:
   name: Pier Luigi Fiorini
-  occupation: Software developer
-  location: Italy
   picture: /images/avatars/avatar_pier.png
   twitter: plfiorini
   googleplus: +PierLuigiFiorini
@@ -9,8 +7,6 @@
 
 - iBeliever:
   name: Micheal Spencer
-  occupation: Software developer and CS student
-  location: USA
   picture: /images/avatars/avatar_michael.jpg
   twitter: iBeliever316
   googleplus: +MichaelSpencer
@@ -18,8 +14,6 @@
 
 - timsueberkrueb:
   name: Tim Süberkrüb
-  occupation: Student
-  location: Germany
   picture: /images/avatars/avatar_tim.png
   twitter: TimSueberkrueb
   googleplus: +TimS%C3%BCberkr%C3%BCbDE
@@ -27,8 +21,6 @@
 
 - pierremtb:
   name: Pierre Jacquier
-  occupation: Student at UTBM
-  location: France
   picture: /images/avatars/avatar_pierre.jpg
   twitter: PierreJacquier
   googleplus: +PierreJacquierFR
@@ -36,16 +28,12 @@
 
 - aldrog:
   name: Andrew Penkrat
-  location: Russia
 
 - nickgermaine:
   name: Nick Germaine
-  location: Canada
 
 - grecko:
   name: Pierre-Yves Siret
-  location: France
 
 - zigapk:
   name: Ziga Patacko Koderman
-  location: Slovenia

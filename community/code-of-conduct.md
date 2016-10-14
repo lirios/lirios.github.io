@@ -18,13 +18,14 @@ to ensure participants can cooperate effectively in a positive and
 inspiring atmosphere, and to explain how together we can strenghten
 and support each other.
 
-## I. Be considerate Your work will be used
+## I. Be considerate
 
-by other people, and you in turn will depend on the work and actions
-of others. Any decision you take will affect other community members,
-and we expect you to take those consequences into account when making
-decisions.  As a contributor, ensure that you give full credit for
-the work of others and bear in mind how your changes affect others. It
+Your work will be used by other people, and you in turn will depend
+on the work and actions of others. Any decision you take will affect
+other community members, and we expect you to take those consequences
+into account when making decisions.
+As a contributor, ensure that you give full credit for the work of
+others and bear in mind how your changes affect others. It
 is also expected that you try to follow the development schedule and
 guidelines.  As a user, remember that contributors work hard on their
 part of Liri and take great pride in it. If you are frustrated your

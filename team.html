@@ -4,27 +4,34 @@ title: Team
 permalink: /team/
 ---
 
-<div class="row">
-    {% for member in site.data.authors %}
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-content">
-                    <div class="row">
-                        <div class="col">
-                            <img class="circle responsive-img" width="100" height="100" src="{{ site.baseurl }}{{ member.picture }}">
-                        </div>
-                        <div class="col">
-                            <span class="card-title">{{ member.name }}</span>
-                            <p>{{ member.occupation }}</p>
-                        </div>
+<!--js providing angular module-->
+<script src="{{ site.baseurl }}/js/team.js"></script>
+
+<div class="row" ng-app="team" ng-controller="teamController as team">
+    {% raw %}
+    <div class="col s12 m6" ng-repeat="member in team.members">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col">
+                        <img class="circle responsive-img" width="100" height="100"
+                             ng-src="{{ member.profile.image_192 }}">
+                    </div>
+                    <div class="col">
+                        <span class="card-title">{{ member.real_name }}</span>
+                        <p>Timezone: {{ member.tz}}</p>
                     </div>
                 </div>
-                <div class="card-action">
-                    {% if member.twitter %}<a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-2x fa-twitter"></i></a>{% endif %}
-                    {% if member.googleplus %}<a href="https://plus.google.com/{{ member.googleplus }}"><i class="fa fa-2x fa-google-plus"></i></a>{% endif %}
-                    {% if member.github %}<a href="https://github.com/{{ member.github }}"><i class="fa fa-2x fa-github"></i></a>{% endif %}
-                </div>
+            </div>
+            <div class="card-action">
+                <a ng-if="member.twitter" href="https://twitter.com/{{ member.twitter }}"><i
+                        class="fa fa-2x fa-twitter"></i></a>
+                <a ng-if="member.googleplus" href="https://plus.google.com/{{ member.googleplus }}"><i
+                        class="fa fa-2x fa-google-plus"></i></a>
+                <a ng-if="member.github" href="https://github.com/{{ member.github }}"><i
+                        class="fa fa-2x fa-github"></i></a>
             </div>
         </div>
-    {% endfor %}
+    </div>
+    {% endraw %}
 </div>

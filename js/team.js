@@ -24,8 +24,6 @@ angular.module('team', []).controller('teamController', function($scope, $http) 
             angular.forEach(data.members, function (member) {
                 if (!member.is_bot && member.name != "slackbot"){
                     //if image is blank, set url to default image
-                    /*TODO: replaces all the urls with default gravatars - to set a custom profile pic,
-                     * users now have to set slack profile pic on their own */
                     if(member.profile.image_192.indexOf("MISSING") != -1){
                         member.profile.image_192 = "{{ site.baseurl }}/images/ic_account_circle.png";
                         member.profile.image_512 = "{{ site.baseurl }}/images/ic_account_circle.png";

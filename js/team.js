@@ -19,6 +19,7 @@ angular.module('team', []).controller('teamController', function($scope, $http) 
     //TODO: change url to the real one
     $http.get('http://localhost:8008/team')
         .success(function(data) {
+
             //push all non bot members (slackbot has to be eliminated the ugly way)
             angular.forEach(data.members, function (member) {
                 if (!member.is_bot && member.name != "slackbot"){
@@ -43,6 +44,9 @@ angular.module('team', []).controller('teamController', function($scope, $http) 
                         if(membersDataDict[member.real_name]["github"] != undefined)
                             member.github = membersDataDict[member.real_name]["github"];
                     }catch(err){}
+
+                    //change timezone to its abbreviation
+                    member.tz = moment().tz(member.tz).format('z');
 
                     //push into members array
                     team.members.push(member);

@@ -41,3 +41,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+
+notifications:
+  email: false
+  slack: lirios:fdUqVmPzqPskEL1UBhqapZ0w

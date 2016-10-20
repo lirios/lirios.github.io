@@ -33,4 +33,5 @@
 # $END_LICENSE$
 #
 
-rsync -crvz --rsh="ssh" --delete-after --delete-excluded _site/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+ssh-keyscan $DEPLOY_HOST >known_hosts
+rsync -crvz --rsh="ssh -o UserKnownHostsFile=known_hosts" --delete-after --delete-excluded _site/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH

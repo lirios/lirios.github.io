@@ -33,5 +33,8 @@
 # $END_LICENSE$
 #
 
-ssh-keyscan $DEPLOY_HOST >known_hosts
-rsync -crvz --rsh="ssh -o UserKnownHostsFile=known_hosts" --delete-after --delete-excluded _site/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+openssl aes-256-cbc -K $encrypted_0e5abe753d37_key -iv $encrypted_0e5abe753d37_iv -in .travis/github_deploy_key.enc -out /tmp/github_deploy_key -d
+eval "$(ssh-agent -s)"
+chmod 600 /tmp/github_deploy_key
+ssh-add /tmp/github_deploy_key
+rsync -crvz --rsh="ssh" --delete-after --delete-excluded _site/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH

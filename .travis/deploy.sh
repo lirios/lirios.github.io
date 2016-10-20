@@ -38,4 +38,4 @@ openssl aes-256-cbc -K $encrypted_0e5abe753d37_key -iv $encrypted_0e5abe753d37_i
 eval "$(ssh-agent -s)"
 chmod 600 /tmp/github_deploy_key
 ssh-add /tmp/github_deploy_key
-rsync -crvz --rsh="ssh" --delete-after --delete-excluded _site/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+rsync -crvz --rsh="ssh" --delete-after --delete-excluded _site/ $DEPLOY_USER@$DEPLOY_HOST:

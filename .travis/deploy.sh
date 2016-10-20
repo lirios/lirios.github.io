@@ -33,6 +33,7 @@
 # $END_LICENSE$
 #
 
+ssh-keyscan $DEPLOY_HOST 2>&1 | tee -a $HOME/.ssh/known_hosts
 openssl aes-256-cbc -K $encrypted_0e5abe753d37_key -iv $encrypted_0e5abe753d37_iv -in .travis/github_deploy_key.enc -out /tmp/github_deploy_key -d
 eval "$(ssh-agent -s)"
 chmod 600 /tmp/github_deploy_key

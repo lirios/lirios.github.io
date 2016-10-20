@@ -15,9 +15,6 @@ env:
     # DEPLOY_PATH
     - secure: "hG9q9dxVSNLzY2W/lrN46gctApa6tM2CBQj7gzJHfEauZh6tXgmxwZqF8NQOrBf5CqyB94Dt8D2sxQdTKIK3ntIcphLM+QM53+ezR8nex7uvDCGsJMkQE1S/UUVTpbboJl1wOEqiJkwjbKG525G0znA/iPsR5K1U7eGIwl3MSPGp22dMr0zdQnsp54NuXKYLfrj+KtlJyEiAqL+aGkbF1kHTVQylTooQsecn9cACsfuWjuoYMUMadMqQ/VsGg8+2ikKktSCIPfzkYt6am2xbcGasYYu5XkTeuPOPVQ6W5sWeY6RCR4geLfhEz/YekfdE3Deq/WhZp85cf85fU/m/ZJu+65MKMpcv+2k7QeH5zSPkxx5OBAaNCZxZZHKuAZgtpt2F+3jSHIZb62ZGw/FrZ8nZO+n+8xduz9LhjPDvWBiw/EY/y9HQRDVDGWrRPGNKm8E/AQ78zsqS7u40szuUEw3Ftxp0SichKgvehoYjXYC5OQO8x5Mtw6sQPfY1tiVGSLXUolC8Tkq4+LzanWyHjn1vW2RzS0XXcrocZ0f/r3VwLdKnx6Ekw7D7Uj0mJNJ7yxLrzJZ3cC1AxPVHkLT3xk/BPXu8QBSEzf1kA0Lp2l25Nus7jeJm+MZwiF3bfJ6vV1IOJkHjB6eXDHVf6SkJ6rjcBi8db36KSgjek7ADHLw="
 
-addons:
-  ssh_known_hosts: $DEPLOY_HOST
-
 install:
   - bundle install
   - gem install html-proofer

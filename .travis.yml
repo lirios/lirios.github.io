@@ -12,4 +12,5 @@ env:
 install:
   - bundle install
   - gem install html-proofer
-script: jekyll build && htmlproofer ./_site
+script: jekyll build
+#after_script: htmlproofer ./_site

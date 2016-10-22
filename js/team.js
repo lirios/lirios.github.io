@@ -17,7 +17,7 @@ angular.module('team', []).controller('teamController', function($scope, $http) 
     team.members = [];
 
     //TODO: change url to the real one
-    $http.get('http://localhost:8008/team')
+    $http.get('{{ site.baseurl }}/api/team')
         .success(function(data) {
 
             //push all non bot members (slackbot has to be eliminated the ugly way)

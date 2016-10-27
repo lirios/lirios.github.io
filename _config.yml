@@ -44,6 +44,8 @@ social_networks:
 # Build settings
 markdown: kramdown
 theme: minima
+sass:
+  style: compressed
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag

@@ -45,6 +45,7 @@ social_networks:
 markdown: kramdown
 theme: minima
 sass:
+  sass_dir: _sass
   style: compressed
 gems:
   - jekyll-sitemap

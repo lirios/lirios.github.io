@@ -5,14 +5,29 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/materialize.css"  media="screen,projection"/>
-  <!-- Font Awesome -->
-  <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css"  media="screen,projection"/>
-  <!-- Customized CSS -->
-  <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/main.css"  media="screen,projection"/>
+  <noscript id="deferred-styles">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/materialize.css"  media="screen,projection"/>
+    <!-- Font Awesome -->
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css"  media="screen,projection"/>
+    <!-- Customized CSS -->
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/main.css"  media="screen,projection"/>
+  </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
 
   <!--AngularJs-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>

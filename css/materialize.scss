@@ -8,12 +8,15 @@
 $primary-color: color("red", "base") !default;
 $secondary-color: color("red", "base") !default;
 
+$primary-text-color: white !default;
+$secondary-text-color: white !default;
+
 .primary-text {
-  color: $primary-color !important;
+  color: $primary-text-color !important;
 }
 
 .secondary-text {
-  color: $secondary-color !important;
+  color: $secondary-text-color !important;
 }
 
 .primary {

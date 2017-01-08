@@ -1,0 +1,59 @@
+---
+layout: onecolumn
+title: Download
+---
+
+<p class="flow-text">
+  You try <code>Liri OS</code> with the live image and eventually install it from there, or
+  if you are already running <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a>,
+  you can add our repository and install the packages, build them yourself with <code>AUR</code>,
+  or build the source code.
+</p>
+
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s3"><a class="active" href="#archlinux">Arch Linux</a></li>
+      <li class="tab col s3"><a href="#iso">Images</a></li>
+      <li class="tab col s3"><a href="#sources">Sources</a></li>
+    </ul>
+  </div>
+  <div id="archlinux" class="col s12">
+    <p>
+      You can install the desktop and applications on Arch Linux using the <code>liri-unstable</code>
+      repository.<br>
+      Append the following lines to your <code>/etc/pacman.conf</code>:
+    </p>
+    <pre>
+      [liri-unstable]
+      SigLevel = Optional TrustAll
+      Server = https://repo.liri.io/archlinux/unstable/$arch/
+    </pre>
+    <p>
+      Then run:
+    </p>
+    <pre>
+      pacman -Syu
+    </pre>
+    <p>
+      To install the shell and core apps:
+    </p>
+    <pre>
+      pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri-appcenter-git
+    </pre>
+    <p>
+      Now you can log into the desktop from <code>SDDM</code> or <code>GDM</code>, select <code>Liri</code> from the session menu and type your password.
+    </p>
+  </div>
+  <div id="iso" class="col s12">
+    <p>
+      Nightly live images are available <a href="https://repo.liri.io/iso/">here</a>.<br>
+      The live image supports <code>x86_64</code> and is based on <code>Arch Linux</code> and the binary packages from <code>liri-unstable</code>.
+    </p>
+  </div>
+  <div id="sources" class="col s12">
+    <p>
+      Download source code from <a href="https://github.com/lirios">here</a>.
+    </p>
+  </div>
+</div>

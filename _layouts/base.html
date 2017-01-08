@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <!-- Import materialize.css -->
-  <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/materialize.css"  media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/{% if page.style %}{{ page.style }}{% else %}materialize.css{% endif %}"  media="screen,projection">
 
   <noscript id="deferred-styles">
     <!--Import Google Icon Font-->

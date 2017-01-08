@@ -5,6 +5,9 @@ permalink: /download/
 style: blue.css
 ---
 
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/prism.css"  media="screen,projection">
+<script data-default-language="markup" src="{{ site.baseurl }}/js/prism.js"></script>
+
 <p class="flow-text">
   You can try <code>Liri OS</code> with the live image and eventually install it from there, or
   if you are already running <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a>,
@@ -26,22 +29,28 @@ style: blue.css
       repository.<br>
       Append the following lines to your <code>/etc/pacman.conf</code>:
     </p>
-    <pre>
-      [liri-unstable]
-      SigLevel = Optional TrustAll
-      Server = https://repo.liri.io/archlinux/unstable/$arch/
+    <pre class="language-markup">
+      <code class="language-markup">
+        [liri-unstable]
+        SigLevel = Optional TrustAll
+        Server = https://repo.liri.io/archlinux/unstable/$arch/
+      </code>
     </pre>
     <p>
       Then run:
     </p>
-    <pre>
-      pacman -Syu
+    <pre class="language-bash">
+      <code class="language-bash">
+        pacman -Syu
+      </code>
     </pre>
     <p>
       To install the shell and core apps:
     </p>
-    <pre>
-      pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri-appcenter-git
+    <pre class="language-bash">
+      <code class="language-bash">
+        pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri-appcenter-git
+      </code>
     </pre>
     <p>
       Now you can log into the desktop from <code>SDDM</code> or <code>GDM</code>, select <code>Liri</code> from the session menu and type your password.

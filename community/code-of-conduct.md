@@ -5,6 +5,7 @@ permalink: /community/code-of-conduct/
 toc: true
 change_frequency: yearly
 priority: 0.6
+style: indigo.css
 ---
 
 In the Liri community, participants from all over the world come

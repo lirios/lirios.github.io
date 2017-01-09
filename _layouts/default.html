@@ -7,14 +7,14 @@ layout: base
     <a id="logo-container" href="{{ site.baseurl }}/" class="brand-logo"><img src="{{ site.baseurl }}/images/logo-100.png" width="100" height="100" title="Logo"/></a>
 
     <ul class="right hide-on-med-and-down">
-      <li class="waves-effect"><a href="#">About</a></li>
-      <li class="waves-effect"><a href="#">Blog</a></li>
-      <li class="waves-effect"><a href="/apps">Apps</a></li>
-      <li class="waves-effect"><a href="/screenshots">Screenshots</a></li>
-      <li class="waves-effect"><a href="#">Develop</a></li>
-      <li class="waves-effect"><a href="{{ site.baseurl }}/get-involved">Get Involved</a></li>
-      <li class="waves-effect"><a href="#">Support</a></li>
-      <li class="waves-effect"><a href="{{ site.baseurl }}/download">Download</a></li>
+      <li id="nav-about" class="waves-effect{% if page.navitem == 'nav-about' %} active{% endif %}"><a href="#">About</a></li>
+      <li id="nav-blog" class="waves-effect{% if page.navitem == 'nav-blog' %} active{% endif %}"><a href="#">Blog</a></li>
+      <li id="nav-apps" class="waves-effect{% if page.navitem == 'nav-apps' %} active{% endif %}"><a href="/apps">Apps</a></li>
+      <li id="nav-screenshots" class="waves-effect{% if page.navitem == 'nav-screenshots' %} active{% endif %}"><a href="/screenshots">Screenshots</a></li>
+      <li id="nav-develop" class="waves-effect{% if page.navitem == 'nav-develop' %} active{% endif %}"><a href="#">Develop</a></li>
+      <li id="nav-get-involved" class="waves-effect{% if page.navitem == 'nav-get-involved' %} active{% endif %}"><a href="{{ site.baseurl }}/get-involved">Get Involved</a></li>
+      <li id="nav-support" class="waves-effect{% if page.navitem == 'nav-support' %} active{% endif %}"><a href="#">Support</a></li>
+      <li id="nav-download" class="waves-effect{% if page.navitem == 'nav-download' %} active{% endif %}"><a href="{{ site.baseurl }}/download">Download</a></li>
     </ul>
 
     <ul id="nav-mobile" class="side-nav">

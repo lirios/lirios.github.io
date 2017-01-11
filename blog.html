@@ -1,0 +1,25 @@
+---
+layout: centered
+title: Blog
+permalink: /blog/
+style: blue.css
+navitem: nav-blog
+---
+
+{% for post in site.posts %}
+  <div class="card">
+    {% if post.image != null %}
+      <div class="card-image">
+        <img src="{{ site.baseurl }}{{ post.image }}">
+        <span class="card-title">{{ post.title }}</span>
+      </div>
+    {% endif %}
+    <div class="card-content">
+      {% if post.image == null %}<span class="card-title">{{ post.title }}</span>{% endif %}
+      <p>{{ post.excerpt }}</p>
+    </div>
+    <div class="card-action">
+      <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+    </div>
+  </div>
+{% endfor %}

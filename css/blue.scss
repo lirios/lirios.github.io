@@ -11,6 +11,8 @@ $secondary-color: color("blue", "darken-3") !default;
 $primary-text-color: white !default;
 $secondary-text-color: white !default;
 
+$card-link-color: $secondary-color;
+
 .primary-text {
   color: $primary-text-color !important;
 }

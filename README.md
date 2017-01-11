@@ -8,7 +8,7 @@ This is the Liri Web site based on [Jekyll](https://jekyllrb.com/).
 Install the following stuff the first time:
 
 ```sh
-gem install jekyll bundler
+gem install bundler
 cd lirios.github.io
 bundle install
 ```

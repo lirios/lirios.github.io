@@ -7,6 +7,7 @@ navitem: nav-blog
 ---
 
 {% for post in site.posts %}
+  {% assign author = site.data.authors[post.author] %}
   <div class="card">
     {% if post.image != null %}
       <div class="card-image">
@@ -20,6 +21,9 @@ navitem: nav-blog
     </div>
     <div class="card-action">
       <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+      <span class="right">
+        <strong>{{ post.date | date_to_string }} • {{ author.name }}</strong>
+      </span>
     </div>
   </div>
 {% endfor %}

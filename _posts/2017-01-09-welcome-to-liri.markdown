@@ -3,6 +3,7 @@ layout: onecolumn
 style: blue.css
 title: "Welcome to Liri!"
 date: 2017-01-09 01:01:01 +0200
+author: plfiorini
 categories: blog
 ---
 

@@ -29,13 +29,13 @@ The OS is currently based on Arch Linux and at this time it doesn't support OSTr
 
 Many changes were done to our workflow, we employed [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) on all projects so you can always find the latest stable version on the `master` branch while work in progress changes are on `develop`.
 
-OS images and packages are not built automatically by a lightweight Golang program.
-We also have improved the Travis continuous integration for all repositories, and the majority of them builds with both gcc and clang with clazy.
+OS images and packages are now built automatically by a lightweight Golang program.
+We also have improved the Travis continuous integration for all repositories, and the majority of them build with both gcc and clang with clazy.
 
 The development team now communicates on a daily basis with Slack.
 
 Not all projects will be released together.
 * Frameworks and libraries such as Fluid, Vibe and QtAccountsService all have their own release schedule.
 * OS related projects such as Shell, Workspace, Themes, Wallpapers and Settings (which often depends on changes to Workspace) all share the same release schedule.
-* Core apps such as Files, Terminal and AppCenter have an indipendent release schedule.
+* Core apps such as Files, Terminal and AppCenter have an independent release schedule.
 * All cross-platform apps such as Browser, Calculator, Text, Player and Music have each their own release schedule.

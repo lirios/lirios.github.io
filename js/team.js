@@ -30,10 +30,8 @@ angular.module('team', []).controller('teamController', function($scope, $http) 
             //push all members
             angular.forEach(data.members, function (member) {
                 //if image is blank, set url to default image
-                if(member.profile.image_192.indexOf("MISSING") != -1){
-                    member.profile.image_192 = "{{ site.baseurl }}/images/ic_account_circle.png";
-                    member.profile.image_512 = "{{ site.baseurl }}/images/ic_account_circle.png";
-                }
+                if(member.image == "" || member.image.indexOf("MISSING") != -1)
+                    member.image = "{{ site.baseurl }}/images/ic_account_circle.png";
 
                 //add twitter, googleplus and github data if it exists
                 try {

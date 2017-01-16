@@ -35,7 +35,9 @@ We also have improved the Travis continuous integration for all repositories, an
 The development team now communicates on a daily basis with Slack.
 
 Not all projects will be released together.
-* Frameworks and libraries such as Fluid, Vibe and QtAccountsService all have their own release schedule.
-* OS related projects such as Shell, Workspace, Themes, Wallpapers and Settings (which often depends on changes to Workspace) all share the same release schedule.
-* Core apps such as Files, Terminal and AppCenter have an independent release schedule.
-* All cross-platform apps such as Browser, Calculator, Text, Player and Music have each their own release schedule.
+<ul class="browser-default">
+<li>Frameworks and libraries such as Fluid, Vibe and QtAccountsService all have their own release schedule.</li>
+<li>OS related projects such as Shell, Workspace, Themes, Wallpapers and Settings (which often depends on changes to Workspace) all share the same release schedule.</li>
+<li>Core apps such as Files, Terminal and AppCenter have an independent release schedule.</li>
+<li>All cross-platform apps such as Browser, Calculator, Text, Player and Music have each their own release schedule.</li>
+</ul>

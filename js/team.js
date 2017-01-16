@@ -12,13 +12,19 @@ membersDataDict["{{member.name}}"] = {};
 {% if member.github %}membersDataDict["{{member.name}}"]["github"] = "{{member.github}}";{% endif %}
 {% endfor %}
 
+// API URL
+{% if jekyll.environment == 'production' %}
+var apiUrl = '{{ site.baseurl }}/api/team';
+{% else %}
+var apiUrl = 'http://127.0.0.1:8080/team';
+{% endif %}
+
 //add angular app
 angular.module('team', []).controller('teamController', function($scope, $http) {
     var team = this;
     team.members = [];
 
-    //TODO: change url to the real one
-    $http.get('{{ site.baseurl }}/api/team')
+    $http.get(apiUrl)
         .success(function(data) {
 
             //push all members

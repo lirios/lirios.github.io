@@ -63,10 +63,34 @@ navitem: nav-download
     </p>
   </div>
   <div id="iso" class="col s12">
-    <p>
-      Nightly live images are available <a href="https://repo.liri.io/iso/">here</a>.<br>
-      The live image supports <code>x86_64</code> and is based on <code>Arch Linux</code> and the binary packages from <code>liri-unstable</code>.
-    </p>
+    <div class="row">
+      <div class="col s6">
+        <h5>Dowload</h5>
+        <p>
+          Nightly live images are available <a href="https://repo.liri.io/iso/">here</a>.<br>
+          The live image supports <code>x86_64</code> and is based on <code>Arch Linux</code> and the binary packages from <code>liri-unstable</code>.
+        </p>
+        <h5>Information</h5>
+        <ul class="browser-default">
+          <li><a href="{{ site.baseurl }}/download/burn-dvd">How to burn the live DVD</a></li>
+          <li><a href="{{ site.baseurl }}/download/make-usb-stick">Make USB stick</a></li>
+          <li><a href="{{ site.baseurl }}/download/virtual-machines">Virtual machines</a></li>
+        </ul>
+      </div>
+      <div class="col s6">
+        <h5>Hardware Support</h5>
+        <p>Hardware supported by Open Source drivers should work. Here's the list of supported GPUs:</p>
+        <ul class="browser-default">
+          <li>Intel: i915 or newer cards</li>
+          <li>AMD/ATI: using the open source driver except for cards supported by radeonsi</li>
+          <li>NVIDIA: cards supported by the nouveau open source driver</li>
+          <li>VMware</li>
+          <li>QEMU with QXL</li>
+        </ul>
+        <p>VirtualBox does not currently support Wayland reliably, please use other virtualization solutions
+           such as <a href="https://virt-manager.org/" target="_blank">virt-manager</a>.</p>
+      </div>
+    </div>
   </div>
   <div id="sources" class="col s12">
     <p>

@@ -30,7 +30,7 @@ angular.module('team', []).controller('teamController', function($scope, $http) 
             //push all members
             angular.forEach(data.members, function (member) {
                 //if image is blank, set url to default image
-                if(member.image == "" || member.image.indexOf("MISSING") != -1)
+                if(member.image == "")
                     member.image = "{{ site.baseurl }}/images/ic_account_circle.png";
 
                 //add twitter, googleplus and github data if it exists

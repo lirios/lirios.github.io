@@ -1,5 +1,5 @@
 ---
-layout: onecolumn
+layout: post
 title: "App Center 0.1.0"
 date: 2017-01-19 21:35:00 +0100
 author: plfiorini

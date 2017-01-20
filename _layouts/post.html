@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.container .section article ul').addClass('browser-default');
+    });
+</script>
+
+<div class="ribbon primary"></div>
+
+<div class="container">
+  <div class="section content">
+    <div class="row">
+      <div class="col s12 m12">
+        <article>
+          <header><h1>{{ page.title | escape }}</h1></header>
+          {{ content | toc }}
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

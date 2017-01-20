@@ -31,9 +31,12 @@ Features:
 * Initial API documentation.
 * Application store friendly license (MPL v2).
 
-### Downloads
+##### Downloads
 
-You can download the sources tarball from [here][tarball], the SHA256 checksum is `1e198730a855ab8662c4ebb4f13bf5b9b142ddac9971f101acfbfd68a98cd554`.
+You can download the source tarball from [GitHub][tarball]
+
+**SHA256 checksum:** `1e198730a855ab8662c4ebb4f13bf5b9b142ddac9971f101acfbfd68a98cd554`
+
 
 [fluid-hawaii]: https://github.com/hawaii-desktop/fluid
 [qml-material]: https://github.com/papyros/qml-material

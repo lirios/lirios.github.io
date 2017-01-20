@@ -29,9 +29,12 @@ Features:
 * QML plugin for NetworkManager support
 * CLI notifications client
 
-### Downloads
+##### Downloads
 
-You can download the sources tarball from [here][tarball], the SHA256 checksum is `95f3ad567029450e2e5a86659287e01d6d5465d20aadcbe7f6459ce4c1055b78`.
+You can download the source tarball from [GitHub][tarball]
+
+**SHA256 checksum:** `95f3ad567029450e2e5a86659287e01d6d5465d20aadcbe7f6459ce4c1055b78`
+
 
 [libhawaii]: https://github.com/hawaii-desktop/libhawaii
 [libpapyros]: https://github.com/papyros/libpapyros

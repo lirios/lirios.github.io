@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "QtAccountsService 0.7.0"
-date: 2017-01-19 21:35:00 +0100
+date: 2017-01-14 00:00:00 +0000
 author: plfiorini
 categories: blog
 tags: announcement release qtaccountsservice

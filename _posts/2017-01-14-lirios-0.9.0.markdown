@@ -1,0 +1,116 @@
+---
+layout: post
+title: "Liri OS 0.9.0"
+date: 2017-01-14 10:00:00 +0100
+author: plfiorini
+categories: blog
+tags: announcement release lirios
+style: blue.css
+navitem: nav-blog
+---
+
+We are proud to announce the immediate availability of Liri OS 0.9.0.
+
+This is the first official release, the culmination of the merge between Hawaii and Papyros.
+
+No official image is available for this release, please use nightly images.
+
+##### Shell
+
+A Wayland compositor written with QML that delivers smooth animations and an easy to use UX.
+It is the continuation of [hawaii-shell][hawaii-shell] with some elements backported from [papyros-shell][papyros-shell].
+
+Features:
+
+* Material Design decorations for Qt applications
+* Supports wl_shell and xdg_shell_v5 Wayland protocols
+* Customizable keyboard shortcuts
+* Multimedia keys to control volume and players are supported
+* MPRIS support
+* Notifications support
+* Devices list
+* Batteries information
+* Wired and wireless networks controls with NetworkManager
+* PulseAudio volume control
+* Automatically run autostart programs at boot
+* Frequently used applications list
+
+[Link to the repository][liri-shell]
+
+##### Workspace
+
+This module contains base applications and settings.
+It is the continuation of [hawaii-workspace][hawaii-workspace] under the Liri brand.
+
+Features:
+
+* Qt platform theme plugin
+* Screenshot application
+* Screencaster CLI application
+* Freedesktop.org menu definition
+
+[Link to the repository][liri-workspace]
+
+##### Settings
+
+Settings allows you to adjust system settings
+
+It is the result of the merge between [hawaii-system-preferences][hawaii-system-preferences] and [papyros-settings][papyros-settings].
+
+Features:
+
+* Redesigned UI of the application
+* Improved UI design of the keyboard module
+* Initial implementation of the UI for appearance, power, sound
+* Details module
+* Initial users module (read only at the moment)
+
+[Link to the repository][liri-settings]
+
+##### Wallpapers
+
+Features:
+
+* Material Design wallpapers
+* Saint-Raphaël wallpapers
+
+[Link to the repository][liri-wallpapers]
+
+##### Themes
+
+This module contains themes for a unified look and feel from boot to login.
+
+Features:
+
+* GRUB theme
+* Plymouth theme
+* SDDM theme
+
+[Link to the repository][liri-themes]
+
+##### Download
+
+You can download the source tarball from GitHub:
+
+* **[liri-shell][liri-shell-tarball]:** SHA256 checksum `09ad65078beedca1119297f15c4dc7d392fb9cbdf92338aea457dfffd636f339`
+* **[liri-workspace][liri-workspace-tarball]:** SHA256 checksum `29352f0f0dba643fa06c7bac3c945b7eaacc071046f84d5a3933a3181494d22b`
+* **[liri-settings][liri-settings-tarball]:** SHA256 checksum `9204c9f77643d1ae46bd8e7cfddb3c223f4fa19a932054f065f93b6088aed16f`
+* **[liri-wallpapers][liri-wallpapers-tarball]:** SHA256 checksum `98112d8febfe1aaf115285a061d4450c13bd7a1197b9539ac04437637745604c`
+* **[liri-themes][liri-themes-tarball]:** SHA256 checksum `59ebc01231ebf955fd847db925fca1c557273da126087af2dfe09013321a54b5`
+
+
+[liri-shell]: https://github.com/lirios/shell
+[liri-shell-tarball]: https://github.com/lirios/shell/releases/download/v0.9.0/liri-shell-0.9.0.tar.xz
+[liri-workspace]: https://github.com/lirios/workspace
+[liri-workspace-tarball]: https://github.com/lirios/workspace/releases/download/v0.9.0/liri-workspace-0.9.0.tar.xz
+[liri-settings]: https://github.com/lirios/settings
+[liri-settings-tarball]: https://github.com/lirios/settings/releases/download/v0.9.0/liri-settings-0.9.0.tar.xz
+[liri-wallpapers]: https://github.com/lirios/wallpapers
+[liri-wallpapers-tarball]: https://github.com/lirios/wallpapers/releases/download/v0.9.0/liri-wallpapers-0.9.0.tar.xz
+[liri-themes]: https://github.com/lirios/themes
+[liri-themes-tarball]: https://github.com/lirios/themes/releases/download/v0.9.0/lirios-themes-0.9.0.tar.xz
+[hawaii-shell]: https://github.com/hawaii-desktop/hawaii-shell
+[hawaii-workspace]: https://github.com/hawaii-desktop/hawaii-workspace
+[hawaii-system-preferences]: https://github.com/hawaii-desktop/hawaii-system-preferences
+[papyros-shell]: https://github.com/papyros/papyros-shell
+[papyros-settings]: https://github.com/papyros/settings-app

@@ -1,15 +1,51 @@
 ---
-layout: default
+layout: base
 ---
 
-<article class="page">
-  <header class="primary">
-    <h1 class="primary-text">{{ page.title | escape }}</h1>
-  </header>
+<style>
+  .liri-layout-transparent {
+    /*background: url('https://getmdl.io/assets/demos/transparent.jpg') center / cover;*/
+    background: url('{{ site.baseurl }}/images/parallax/background_02.png') center / cover;
+  }
+  
+  .liri-layout-transparent .mdl-layout__header,
+  .liri-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+    color: white;
+  }
 
-  <div class="row">
-    <div class="col s12 m6 offset-m3">
-      {{ content | toc }}
+  .liri-blog__posts {
+    max-width: 900px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+</style>
+
+<div class="liri-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Liri</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      {% include large-screen-nav.html %}
     </div>
-  </div>
-</article>
+  </header>
+  <!-- Mobile navigation -->
+  {% include mobile-nav.html %}
+  <main class="mdl-layout__content">
+    <div class="mdl-layout__container">
+      <div class="liri-blog__posts mdl-grid">
+        <a name="top"></a>
+
+        {{ content | toc }}
+      </div>
+      {% include footer.html %}
+    </div>
+  </main>
+</div>

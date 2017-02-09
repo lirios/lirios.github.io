@@ -2,37 +2,35 @@
 layout: onecolumn
 title: Download
 permalink: /download/
-style: blue.css
+theme: blue-light_blue
 navitem: nav-download
 ---
 
 <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/prism.css"  media="screen,projection">
 <script data-default-language="markup" src="{{ site.baseurl }}/js/prism.js"></script>
 
-<p class="flow-text">
+<p>
   You can try <code>Liri OS</code> with the live image and eventually install it from there, or
   if you are already running <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a>,
   you can add our repository and install the packages, build them yourself with <code>AUR</code>,
   or build the source code.
 </p>
 
-<p class="flow-text">
+<p>
   Remember that <code>Liri OS</code> is currently in <span class="red white-text"><strong>&nbsp;alpha&nbsp;</strong></span>
   stage and there might be issues.
 </p>
 
-<div class="row">
-  <div class="col s12">
-    <ul class="tabs">
-      <li class="tab col s3 waves-effect"><a class="active" href="#archlinux">Arch Linux</a></li>
-      <li class="tab col s3 waves-effect"><a href="#iso">Images</a></li>
-      <li class="tab col s3 waves-effect"><a href="#sources">Sources</a></li>
-    </ul>
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar">
+    <a href="#archlinux-panel" class="mdl-tabs__tab is-active">Arch Linux</a>
+    <a href="#iso-panel" class="mdl-tabs__tab">Images</a>
+    <a href="#sources-panel" class="mdl-tabs__tab">Sources</a>
   </div>
-  <div id="archlinux" class="col s12">
+
+  <div class="mdl-tabs__panel is-active" id="archlinux-panel">
     <p>
-      You can install the desktop and applications on Arch Linux using the <code>liri-unstable</code>
-      repository.<br>
+      You can install the desktop and applications on Arch Linux using the <code>liri-unstable</code> repository.<br>
       Append the following lines to your <code>/etc/pacman.conf</code>:
     </p>
     <pre class="language-markup">
@@ -59,40 +57,37 @@ navitem: nav-download
       </code>
     </pre>
     <p>
-      Now you can log into the desktop from <code>SDDM</code> or <code>GDM</code>, select <code>Liri</code> from the session menu and type your password.
+      Now you can log into the desktop from <code>SDDM</code> or <code>GDM</code>, select <code>Liri</code> from the session
+      menu and type your password.
     </p>
   </div>
-  <div id="iso" class="col s12">
-    <div class="row">
-      <div class="col s6">
-        <h5>Download</h5>
-        <p>
-          Nightly live images are available <a href="https://repo.liri.io/images/nightly">here</a>.<br>
-          The live image supports <code>x86_64</code> and is based on <code>Arch Linux</code> and the binary packages from <code>liri-unstable</code>.
-        </p>
-        <h5>Information</h5>
-        <ul class="browser-default">
-          <li><a href="{{ site.baseurl }}/download/burn-dvd">How to burn the live DVD</a></li>
-          <li><a href="{{ site.baseurl }}/download/make-usb-stick">Make USB stick</a></li>
-          <li><a href="{{ site.baseurl }}/download/virtual-machines">Virtual machines</a></li>
-        </ul>
-      </div>
-      <div class="col s6">
-        <h5>Hardware Support</h5>
-        <p>Hardware supported by Open Source drivers should work. Here's the list of supported GPUs:</p>
-        <ul class="browser-default">
-          <li>Intel: i915 or newer cards</li>
-          <li>AMD/ATI: using the open source driver except for cards supported by radeonsi</li>
-          <li>NVIDIA: cards supported by the nouveau open source driver</li>
-          <li>VMware</li>
-          <li>QEMU with QXL</li>
-        </ul>
-        <p>VirtualBox does not currently support Wayland reliably, please use other virtualization solutions
-           such as <a href="https://virt-manager.org/" target="_blank">virt-manager</a>.</p>
-      </div>
-    </div>
+  <div class="mdl-tabs__panel" id="iso-panel">
+    <h5>Download</h5>
+    <p>
+      Nightly live images are available <a href="https://repo.liri.io/images/nightly">here</a>.<br> The live image supports
+      <code>x86_64</code> and is based on <code>Arch Linux</code> and the binary packages from <code>liri-unstable</code>.
+    </p>
+    <h5>Information</h5>
+    <ul>
+      <li><a href="{{ site.baseurl }}/download/burn-dvd">How to burn the live DVD</a></li>
+      <li><a href="{{ site.baseurl }}/download/make-usb-stick">Make USB stick</a></li>
+      <li><a href="{{ site.baseurl }}/download/virtual-machines">Virtual machines</a></li>
+    </ul>
+    <h5>Hardware Support</h5>
+    <p>Hardware supported by Open Source drivers should work. Here's the list of supported GPUs:</p>
+    <ul>
+      <li>Intel: i915 or newer cards</li>
+      <li>AMD/ATI: using the open source driver except for cards supported by radeonsi</li>
+      <li>NVIDIA: cards supported by the nouveau open source driver</li>
+      <li>VMware</li>
+      <li>QEMU with QXL</li>
+    </ul>
+    <p>
+      VirtualBox does not currently support Wayland reliably, please use other virtualization solutions such as
+      <a href="https://virt-manager.org/" target="_blank">virt-manager</a>.
+    </p>
   </div>
-  <div id="sources" class="col s12">
+  <div class="mdl-tabs__panel" id="sources-panel">
     <p>
       Download source code from <a href="https://github.com/lirios">here</a>.
     </p>

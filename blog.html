@@ -6,24 +6,43 @@ style: blue.css
 navitem: nav-blog
 ---
 
+<style>
+  .liri-card-wide.mdl-card {
+    width: 512px;
+    margin-bottom: 16px;
+  }
+
+  .liri-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+  }
+
+  .liri-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+
+  .right {
+    text-align: right;
+  }
+</style>
+
 {% for post in site.posts %}
   {% assign author = site.data.authors[post.author] %}
-  <div class="card">
-    {% if post.image != null %}
-      <div class="card-image">
-        <img src="{{ site.baseurl }}{{ post.image }}">
-        <span class="card-title">{{ post.title }}</span>
-      </div>
-    {% endif %}
-    <div class="card-content">
-      {% if post.image == null %}<span class="card-title">{{ post.title }}</span>{% endif %}
-      <p>{{ post.excerpt }}</p>
+  <div class="liri-card-wide mdl-card mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">{{ post.title }}</h2>
     </div>
-    <div class="card-action">
-      <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+    <div class="mdl-card__supporting-text">{{ post.excerpt }}</div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
       <span class="right">
         <strong>{{ post.date | date_to_string }} • {{ author.name }}</strong>
       </span>
+    </div>
+    <div class="mdl-card__menu">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <i class="material-icons">share</i>
+      </button>
     </div>
   </div>
 {% endfor %}

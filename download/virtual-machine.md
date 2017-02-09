@@ -2,7 +2,7 @@
 layout: onecolumn
 title: Virtual machines
 permalink: /download/virtual-machines/
-style: blue.css
+theme: blue-light_blue
 navitem: nav-download
 ---
 

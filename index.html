@@ -2,6 +2,92 @@
 layout: default
 ---
 
+<style>
+  .liri-download {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .liri-section {
+    width: auto;
+    background-color: #ffffff;
+  }
+
+  .liri-laptop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #ffffff;
+  }
+
+  .liri-laptop-section {
+    position: relative;
+    padding: 80px 0;
+    width: auto;
+    background-color: #f3f3f3;
+    vertical-align: middle;
+  }
+
+  .liri-features-section {
+    padding: 40px 0;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+</style>
+
+<div class="liri-laptop mdl-typography--text-center">
+  <h1>Liri</h1>
+  <h5>An OS and apps built with modern design and features</h5>
+  <img class="responsive-img liri-laptop" src="{{ site.baseurl }}/images/home/screenshot_desktop.png">
+  <div class="liri-download">
+    <a href="{{ site.baseurl }}/download" id="download-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+      <i class="material-icons">file_download</i> Download
+    </a>
+    <p>
+      <span class="mdl-color-text--white-600">Nightly alpha | 900 MB</span>
+    </p>
+ </div>
+</div>
+
+<div class="liri-section">
+  <div class="liri-features-section">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+        <div class="mdl-typography--text-center"><i class="material-icons md-48">flash_on</i></div>
+        <h5 class="mdl-typography--text-center">Modern Features</h5>
+
+        <p>
+          We are building some exciting features including atomic upgrades, powerful notifications support, and much more. We're leveraging
+          the latest and greatest Linux technologies, including OSTree, Wayland, Qt 5, and much more.
+        </p>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+        <div class="mdl-typography--text-center"><i class="material-icons md-48">group</i></div>
+        <h5 class="mdl-typography--text-center">User Experience Focused</h5>
+
+        <p>
+          By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components
+          and animations that provide more feedback to users. Additionally, a single underlying responsive system across
+          all platforms allow for a more unified user experience.
+        </p>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+        <div class="mdl-typography--text-center"><i class="material-icons md-48">settings</i></div>
+        <h5 class="mdl-typography--text-center">Open Source and Open Governance</h5>
+
+        <p>
+          Liri is a meritocratic, consensus-based community interested in developing an OS and apps with modern design in mind. We
+          believe in the power of Open Source, Free Software and worldwide collaboration as we want to build, share and improve
+          software together and make it available to everyone.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+
 <div class="container">
 
     <div class="section">
@@ -20,7 +106,6 @@ layout: default
 	
     <div class="section">
 
-    <!--   Icon Section   -->
     <div class="row">
       <div class="col s12 m4">
         <div class="icon-block">
@@ -100,3 +185,4 @@ layout: default
   <div class="parallax"><img src="{{ site.baseurl }}/images/parallax/background_02.png" alt="Unsplashed background img 3"></div>
 </div>
 
+-->

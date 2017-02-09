@@ -50,4 +50,3 @@ sass:
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-toc

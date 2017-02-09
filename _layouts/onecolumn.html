@@ -1,18 +1,30 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="ribbon primary"></div>
-
-<div class="container">
-  <div class="section content">
-    <div class="row">
-      <div class="col s12 m12">
-        <article>
-          <header><h1>{{ page.title | escape }}</h1></header>
-          {{ content | toc }}
-        </article>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="liri-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">{{ page.title | escape }}</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      {% include large-screen-nav.html %}
+    </div>
+  </header>
+  <!-- Mobile navigation -->
+  {% include mobile-nav.html %}
+  <div class="liri-ribbon"></div>
+  <main class="liri-main mdl-layout__content">
+    <div class="liri-container mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+      <div class="liri-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+        <a name="top"></a>
+        {{ content | toc }}
       </div>
     </div>
-  </div>
+    {% include footer.html %}
+  </main>
 </div>

@@ -2,8 +2,8 @@
 layout: onecolumn
 title: Make a USB stick
 permalink: /download/make-usb-stick/
+theme: blue-light_blue
 navitem: nav-download
-style: blue.css
 ---
 
 Using a USB flash drive is one of the best ways to test Liri OS and it’s also

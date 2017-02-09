@@ -2,7 +2,7 @@
 layout: onecolumn
 title: How to burn the live DVD
 permalink: /download/burn-dvd/
-style: blue.css
+theme: blue-light_blue
 navitem: nav-download
 ---
 

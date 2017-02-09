@@ -3,28 +3,78 @@
 ---
 @charset "utf-8";
 
-@import "materialize/components/color";
+/*** Materialize elevation ***/
 
-$primary-color: color("red", "base") !default;
-$secondary-color: color("red", "base") !default;
-
-$primary-text-color: white !default;
-$secondary-text-color: black !default;
-
-.primary-text {
-  color: $primary-text-color !important;
+.z-depth-1 {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
-.secondary-text {
-  color: $secondary-text-color !important;
+.z-depth-1-half {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-.primary {
-  background-color: $primary-color !important;
+.z-depth-2 {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
-.secondary {
-  background-color: $secondary-color !important;
+.z-depth-3 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
 
-@import "materialize/materialize";
+.z-depth-4 {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+.z-depth-5 {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/*** Materialize materialbox ***/
+
+img.responsive-img,
+video.responsive-video {
+    max-width: 100%;
+    height: auto;
+}
+
+.materialboxed {
+    display: block;
+    cursor: zoom-in;
+    position: relative;
+    transition: opacity .4s;
+}
+
+.materialboxed:hover:not(.active) {
+    opacity: .8;
+}
+
+.materialboxed.active {
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out;
+}
+
+#materialbox-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #292929;
+    z-index: 1000;
+    will-change: opacity;
+}
+
+.materialbox-caption {
+    position: fixed;
+    display: none;
+    color: #fff;
+    line-height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0% 15%;
+    height: 50px;
+    z-index: 1000;
+    -webkit-font-smoothing: antialiased;
+}

@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://liri.io" # the base hostname & protocol for your site
 logo: "/images/logo.png"
-exclude: [.travis, vendor]
+exclude: [.travis, .vscode, vendor]
 social:
   links:
     - https://github.com/lirios

@@ -14,8 +14,7 @@ layout: default
   }
 
   .liri-laptop {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 32px;
     color: #ffffff;
   }
 
@@ -29,23 +28,33 @@ layout: default
 
   .liri-features-section {
     padding: 40px 0;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 32px;
+    margin-right: 32px;
+    text-align: justify;
+  }
+
+  .md-48 {
+    font-size: 64px;
   }
 </style>
 
 <div class="liri-laptop mdl-typography--text-center">
-  <h1>Liri</h1>
-  <h5>An OS and apps built with modern design and features</h5>
-  <img class="responsive-img liri-laptop" src="{{ site.baseurl }}/images/home/screenshot_desktop.png">
-  <div class="liri-download">
-    <a href="{{ site.baseurl }}/download" id="download-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-      <i class="material-icons">file_download</i> Download
-    </a>
-    <p>
-      <span class="mdl-color-text--white-600">Nightly alpha | 900 MB</span>
-    </p>
- </div>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--middle mdl-cell--6-col mdl-cell--12-phone">
+      <img class="responsive-img liri-laptop" src="{{ site.baseurl }}/images/home/screenshot_desktop.png">
+    </div>
+    <div class="mdl-cell mdl-cell--middle mdl-cell--6-col mdl-cell--12-phone">
+      <h3>An OS and apps built with modern design and features</h3>
+      <div class="liri-download">
+        <a href="{{ site.baseurl }}/download" id="download-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--yellow-500">
+          <i class="material-icons">file_download</i> Download
+        </a>
+        <p>
+          <span class="mdl-color-text--white-600" style="opacity: 0.7">Nightly alpha | 900 MB</span>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="liri-section">

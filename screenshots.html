@@ -1,10 +1,16 @@
 ---
-layout: page
+layout: centered
 title: Screenshots
 permalink: /screenshots/
-theme: blue-light_blue
+theme: indigo-light_blue
 navitem: nav-screenshots
 ---
+
+<style>
+      img .initialized {
+            z-index: 9999;
+      }
+</style>
 
 <script type="text/javascript">
   $(document).ready(function(){
@@ -12,25 +18,22 @@ navitem: nav-screenshots
   });
 </script>
 
-<div class="container">
-  <div class="row">
-    <div class="col s12">
-      <img class="materialboxed responsive-img z-depth-1" data-caption="Desktop" src="{{ site.baseurl }}/images/screenshots/desktop1.png">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-      <img class="materialboxed responsive-img z-depth-1" data-caption="Desktop" src="{{ site.baseurl }}/images/screenshots/movie1.png">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-      <img class="materialboxed responsive-img z-depth-1" data-caption="Frequent apps view" src="{{ site.baseurl }}/images/screenshots/frequent_apps1.png">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-      <img class="materialboxed responsive-img z-depth-1" data-caption="Fluid, our framework for Material Design and Universal" src="{{ site.baseurl }}/images/screenshots/fluid1.png">
-    </div>
-  </div>
+<div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-cell-12-col-tablet">
+            <img class="materialboxed responsive-img z-depth-1" data-caption="Desktop"
+                 src="{{ site.baseurl }}/images/screenshots/desktop1.png">
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-cell-12-col-tablet">
+            <img class="materialboxed responsive-img z-depth-1" data-caption="Desktop"
+                 src="{{ site.baseurl }}/images/screenshots/movie1.png">
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-cell-12-col-tablet">
+            <img class="materialboxed responsive-img z-depth-1" data-caption="Frequent apps view"
+                 src="{{ site.baseurl }}/images/screenshots/frequent_apps1.png">
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-cell-12-col-tablet">
+            <img class="materialboxed responsive-img z-depth-1"
+                 data-caption="Fluid, our framework for Material Design and Universal"
+                 src="{{ site.baseurl }}/images/screenshots/fluid1.png">
+      </div>
 </div>

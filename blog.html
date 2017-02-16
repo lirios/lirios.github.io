@@ -2,7 +2,7 @@
 layout: centered
 title: Blog
 permalink: /blog/
-style: blue.css
+theme: red-orange
 navitem: nav-blog
 ---
 
@@ -28,15 +28,17 @@ navitem: nav-blog
 
 {% for post in site.posts %}
   {% assign author = site.data.authors[post.author] %}
-  <div class="liri-card-wide mdl-card mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class=" mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">{{ post.title }}</h2>
     </div>
-    <div class="mdl-card__supporting-text">{{ post.excerpt }}</div>
+    <div class="mdl-card__supporting-text mdl-card--expand">
+      <p>{{ post.excerpt }}</p>
+    </div>
     <div class="mdl-card__actions mdl-card--border">
       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
       <span class="right">
-        <strong>{{ post.date | date_to_string }} • {{ author.name }}</strong>
+        <span>{{ post.date | date_to_string }} • {{ author.name }}</span>
       </span>
     </div>
     <div class="mdl-card__menu">

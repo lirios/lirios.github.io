@@ -1,8 +1,15 @@
 <!-- Navigation. We hide it in small screens. -->
-<nav class="mdl-navigation mdl-layout--large-screen-only">
-    <a class="mdl-navigation__link" href="{{ site.baseurl }}/blog">Blog</a>
-    <a class="mdl-navigation__link" href="{{ site.baseurl }}/apps">Apps</a>
-    <a class="mdl-navigation__link" href="{{ site.baseurl }}/screenshots">Screenshots</a>
-    <a class="mdl-navigation__link" href="{{ site.baseurl }}/get-involved">Get Involved</a>
-    <a class="mdl-navigation__link" href="{{ site.baseurl }}/download">Download</a>
+{% assign current = page.url | downcase | split: '/' %}
+
+<nav class="mdl-navigation mdl-layout--large-screen-only" style="text-transform: uppercase;">
+    <a class="mdl-navigation__link" href="{{ site.baseurl }}/blog"
+       {% if current[1] == 'blog' %} style="opacity: 1" {% endif %}>Blog</a>
+    <a class="mdl-navigation__link" href="{{ site.baseurl }}/apps"
+       {% if current[1] == 'apps' %} style="opacity: 1" {% endif %}>Apps</a>
+    <a class="mdl-navigation__link" href="{{ site.baseurl }}/screenshots"
+       {% if current[1] == 'screenshots' %} style="opacity: 1" {% endif %}>Screenshots</a>
+    <a class="mdl-navigation__link" href="{{ site.baseurl }}/get-involved"
+       {% if current[1] == 'get-involved' %} style="opacity: 1" {% endif %}>Get Involved</a>
+    <a class="mdl-navigation__link" href="{{ site.baseurl }}/download"
+       {% if current[1] == 'download' %} style="opacity: 1" {% endif %}>Download</a>
 </nav>

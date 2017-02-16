@@ -20,7 +20,7 @@ layout: base
     padding: 0;
     display: flex;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     flex-shrink: 0;
   }
 
@@ -43,8 +43,8 @@ layout: base
   }
 </style>
 
-<div class="liri-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
+<div class="liri-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <a href="{{ site.baseurl }}/">
@@ -59,7 +59,8 @@ layout: base
   </header>
   <!-- Mobile navigation -->
   {% include mobile-nav.html %}
-  <main class="mdl-layout__content">
+  <div class="liri-ribbon mdl-color--primary"></div>
+  <main class="liri-main mdl-layout__content">
     <div class="mdl-layout__container">
       <div class="liri-blog__posts mdl-grid">
         <a name="top"></a>

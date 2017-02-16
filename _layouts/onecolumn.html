@@ -1,13 +1,39 @@
 ---
 layout: base
 ---
+<style>
+  .liri-bird {
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    margin: 0 24px;
+  }
+
+  .pt32 {
+    padding-top: 32px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .mdl-layout__drawer-button {
+      /* Hide the Hamburger button but will leave an unused space */
+      display: none;
+    }
+    .mdl-layout__header-row {
+      /* so important to make sure the Hamburger button didn't leave an unused space */
+      padding-left: 24px !important;
+    }
+  }
+</style>
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="liri-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header mdl-layout__header--scroll">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">{{ page.title | escape }}</span>
+      <a href="{{ site.baseurl }}/">
+        <img src="{{ site.baseurl }}/images/liri-bird.svg" alt="" class="liri-bird">
+      </a>
+      <span class="mdl-layout-title">Liri</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
@@ -16,11 +42,11 @@ layout: base
   </header>
   <!-- Mobile navigation -->
   {% include mobile-nav.html %}
-  <div class="liri-ribbon"></div>
+  <div class="liri-ribbon mdl-color--primary"></div>
   <main class="liri-main mdl-layout__content">
     <div class="liri-container mdl-grid">
       <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-      <div class="liri-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+      <div class="liri-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col pt32">
         <a name="top"></a>
         {{ content | toc }}
       </div>

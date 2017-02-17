@@ -13,7 +13,9 @@ layout: base
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <i class="icon-liri liri-bird pointer" onclick="location.href='{{ site.baseurl }}/'"></i>
-      <span class="mdl-layout-title pointer" onclick="location.href='{{ site.baseurl }}/'">Liri</span>
+      <span class="mdl-layout-title pointer mdl-layout--large-screen-only"
+            onclick="location.href='{{ site.baseurl }}/'">Liri</span>
+      <span class="mdl-layout-title mdl-layout--small-screen-only">{{ page.title | escape }}</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->

@@ -45,6 +45,7 @@
     font-size: 24px;
     opacity: 1;
     margin: 0 24px;
+    display: none;
 }
 
 .pointer {
@@ -70,6 +71,10 @@
 
 
 @media screen and (min-width: 1024px) {
+    .liri-bird {
+        display: inline-block;
+    }
+
     .mdl-layout__drawer-button {
         /* Hide the Hamburger button but will leave an unused space */
         display: none;

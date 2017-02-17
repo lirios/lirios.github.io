@@ -16,18 +16,21 @@ layout: base
   }
 </style>
 
-<div class="liri-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
+<div class="liri-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <i class="icon-liri liri-bird pointer" onclick="location.href='{{ site.baseurl }}/'"></i>
-      <span class="mdl-layout-title pointer" onclick="location.href='{{ site.baseurl }}/'">Liri</span>
+      <span class="mdl-layout-title pointer mdl-layout--large-screen-only"
+            onclick="location.href='{{ site.baseurl }}/'">Liri</span>
+      <span class="mdl-layout-title mdl-layout--small-screen-only">Liri</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       {% include large-screen-nav.html %}
     </div>
   </header>
+
   <!-- Mobile navigation -->
   {% include mobile-nav.html %}
   <main class="mdl-layout__content">

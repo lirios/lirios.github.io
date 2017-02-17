@@ -40,3 +40,42 @@
 .liri-content h3 {
     margin-top: 48px;
 }
+
+.liri-bird {
+    font-size: 24px;
+    opacity: 1;
+    margin: 0 24px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.no-padding-top {
+    padding-top: 0;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0;
+}
+
+.primary-text {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.secondary-text {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .mdl-layout__drawer-button {
+        /* Hide the Hamburger button but will leave an unused space */
+        display: none;
+    }
+    .mdl-layout__header-row {
+        /* so important to make sure the Hamburger button didn't leave an unused space */
+        padding-left: 24px !important;
+    }
+}

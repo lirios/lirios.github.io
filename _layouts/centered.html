@@ -3,6 +3,10 @@ layout: base
 ---
 
 <style>
+  .transparent {
+    background-color: transparent;
+  }
+
   .liri-layout-transparent {
     /*background: url('https://getmdl.io/assets/demos/transparent.jpg') center / cover;*/
       background: url('{{ site.baseurl }}/images/parallax/bg2.png') center / cover;
@@ -59,7 +63,7 @@ layout: base
   </header>
   <!-- Mobile navigation -->
   {% include mobile-nav.html %}
-  <div class="liri-ribbon mdl-color--primary"></div>
+  <div class="liri-ribbon transparent"></div>
   <main class="liri-main mdl-layout__content">
     <div class="mdl-layout__container">
       <div class="liri-blog__posts mdl-grid">

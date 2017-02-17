@@ -1,126 +1,169 @@
 ---
-layout: onecolumn
+layout: post
 title: Make a USB stick
 permalink: /download/make-usb-stick/
-theme: blue-light_blue
+theme: deep_orange-light_blue
 navitem: nav-download
 ---
 
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/prism.css" media="screen,projection">
+<script data-default-language="markup" src="{{ site.baseurl }}/js/prism.js"></script>
+
+<p>
 Using a USB flash drive is one of the best ways to test Liri OS and it’s also
 the only way to try it without touching your hard drives.
+</p>
 
-Running Liri OS on USB flash drives is way faster than running it from a CD.
+<p>
+Running Liri OS on USB flash drives is way faster than running it from a DVD.
+</p>
 
+<p>
 Note that running off a USB flash drive might still be a lot slower than a
 real hard drive depending on your model. In the following guide, we will
 copy the image directly to the raw drive, not to a partition, replacing
 everything including the MBR, destroying all the partitions and data that
 were there.
+</p>
 
+<p>
 First, be sure you have a computer that supports booting off of USB
 flash drives. That shouldn’t be a problem on most recent computers.
+</p>
 
+<p>
 You might need to hit a function key (e.g F8) at boot or change the
 boot device order in your BIOS for the USB stick to be picked up, please
 refer to your computer or mother-board manual.
+</p>
 
+<p>
 Start by downloading the live image from the download page.
+</p>
 
+<p>
 Get a sufficiently big USB flash drive (at least the size of the unzipped
 image), then depending on your operating system, follow one of the
 methods below.
+</p>
 
-## Linux and FreeBSD
+<h4>Linux and FreeBSD</h4>
 
-Open a terminal.
+<p>Open a terminal.</p>
 
-Find the device name of your USB flash drive by typing this command:
+<p>Find the device name of your USB flash drive by typing this command:</p>
 
-```sh
+<pre class="language-bash">
+    <code class="language-bash">
 sudo fdisk -l
-```
+    </code>
+</pre>
 
-This will output the device name of the disks present on your system.
+<p>This will output the device name of the disks present on your system.</p>
 
+<p>
 You can guess the name by looking at the drive size or by executing this
 command before and after plugging your USB flash drive.
+</p>
 
-Ensure the USB device is unmounted:
+<p>Ensure the USB device is unmounted:</p>
 
-```sh
+<pre class="language-bash">
+    <code class="language-bash">
 umount /dev/sd[x]
-```
+    </code>
+</pre>
 
-(where /dev/sd[x] is your USB device) and then issue the following command:
+<p>(where /dev/sd[x] is your USB device) and then issue the following command:</p>
 
 <div class="alert alert-danger"><strong>Be sure to verify by all means that it's the correct device name as the following command will erase everything on that drive!</strong></div>
 
-```sh
+<pre class="language-bash">
+    <code class="language-bash">
 dd if=/path/to/lirios-live-media.iso of=/dev/sd[x] bs=4M
-```
+    </code>
+</pre>
 
-where /dev/sd[x] is your USB device. **Make sure to use /dev/sd[x] and not /dev/sd[x]1.**
+<p>where /dev/sd[x] is your USB device. <strong>Make sure to use /dev/sd[x] and not /dev/sd[x]1.</strong></p>
 
 <div class="alert alert-warning"><strong>Note:</strong> Some older firmware
 does not understand the isohybrid hack where start of fake partition offset
 is 0. See <a href="https://bugs.archlinux.org/task/32189" target="_blank">here</a>
 for a fix involving isohybrid.pl</div>
 
-## Windows
+<h4>Windows</h4>
 
-Download [ImageWriter](https://sourceforge.net/projects/win32diskimager/), unzip it in
-the place of your choice and run it.
+<p>Download <a href="https://sourceforge.net/projects/win32diskimager/" target="_blank">ImageWriter</a>, unzip it in
+the place of your choice and run it.</p>
 
 <div class="alert alert-danger"><strong>Be sure to carefully identify and note the drive
 letter corresponding to your USB stick, the risk is that you could completely overwrite
 and destroy data on the wrong disk.</strong></div>
 
-Rename the downloaded live image to *lirios-live-image.img* otherwise you won't see
+<p>
+Rename the downloaded live image to <em>lirios-live-image.img</em> otherwise you won't see
 it in ImageWriter's file selection panel. This difference in suffixes is simply
 cosmetic however, the image will be written fine regardless.
+</p>
 
+<p>
 Run the ImageWriter program (Win32DiskImager.exe), select the ISO file, select the
-correct USB drive letter and click the **Write** button.
+correct USB drive letter and click the <strong>Write</strong> button.
+</p>
 
+<p>
 Don't remove the USB stick while it's still writing to it. When finished, Windows
 won't be able to access the content of the stick and might propose you to format it,
-this is perfectly normal. *Do not format* it if asked.
+this is perfectly normal. <em>Do not format</em> it if asked.
+</p>
 
+<p>
 If you'd like to unplug the USB flash drive now, be sure to eject it properly using
 the usual "Safely remove device" icon from the task bar.
+</p>
 
-## MacOS X
+<h4>MacOS X</h4>
 
-Open a terminal (under Utilities).
+<p>Open a terminal (under Utilities).</p>
 
-Find the device name of your USB flash drive by typing this command:
+<p>Find the device name of your USB flash drive by typing this command:</p>
 
-```sh
+<pre class="language-bash">
+    <code class="language-bash">
 diskutil list
-```
+    </code>
+</pre>
 
-This will output the device name of the dsisk present on your system.
+<p>This will output the device name of the dsisk present on your system.</p>
 
+<p>
 You can guess the name by looking at the drive size of by executing this
 command before and after plugging your USB flash drive.
+</p>
 
-Be sure to unmount the drive
+<p>Be sure to unmount the drive</p>
 
-```sh
+<pre class="language-bash">
+    <code class="language-bash">
 diskutil unmountDisk /dev/disk[x]
-```
+    </code>
+</pre>
 
-(where [x] is the disk number of your USB flash drive as found previously)
+<p>(where [x] is the disk number of your USB flash drive as found previously)</p>
 
 <div class="alert alert-danger"><strong>Be sure to verify by all means that it is the correct
 device name as the following command will erase everything on that drive!</strong></div>
 
-```sh
+<pre class="language-bash">
+    <code class="language-bash">
 sudo dd if=/path/to/lirios-live-media.iso of=/dev/rdisk[x] bs=1m
-```
+    </code>
+</pre>
 
-If you'd like to unplug the USB stick, be sure to eject it properly:
+<p>If you'd like to unplug the USB stick, be sure to eject it properly:</p>
 
-```sh
+<pre class="language-bash">
+    <code class="language-bash">
 diskutil eject /dev/disk[x]
-```
+    </code>
+</pre>

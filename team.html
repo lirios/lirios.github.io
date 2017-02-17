@@ -1,9 +1,32 @@
 ---
-layout: onecolumn
+layout: page
 title: Team
 permalink: /team/
 theme: blue-light_blue
 ---
+
+<style>
+    .liri-card-image.mdl-card {
+        width: 256px;
+        height: 256px;
+    }
+
+    .liri-card-image > .mdl-card__actions {
+        height: 48px;
+        padding: 16px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .liri-card-image__caption {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .liri-card-image > .mdl-card__menu {
+        color: #fff;
+    }
+</style>
 
 <!--add moment and moment-timezone js libraries, needed by team.js-->
 <script src="{{ site.baseurl }}/js/moment.min.js"></script>
@@ -11,29 +34,24 @@ theme: blue-light_blue
 <!--js providing angular module-->
 <script src="{{ site.baseurl }}/js/team.js"></script>
 
-<div class="row" ng-app="team" ng-controller="teamController as team">
+<div class="mdl-grid" ng-app="team" ng-controller="teamController as team">
     {% raw %}
-    <div class="col s12 m6" ng-repeat="member in team.members">
-        <div class="card">
-            <div class="card-content">
-                <div class="row">
-                    <div class="col">
-                        <img class="circle responsive-img" width="100" height="100"
-                             ng-src="{{ member.image }}">
-                    </div>
-                    <div class="col">
-                        <span class="card-title">{{ member.real_name }}</span>
-                        <p>Timezone: {{ member.tz}}</p>
-                    </div>
-                </div>
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" ng-repeat="member in team.members">
+        <div class="liri-card-image mdl-card mdl-shadow--2dp" style="background: url('{{ member.image }}') center / cover">
+            <div class="mdl-card__title mdl-card--expand"></div>
+            <div class="mdl-card__actions">
+                <span class="liri-card-image__caption">{{ member.real_name }} ({{ member.tz }})</span>
             </div>
-            <div class="card-action">
-                <a ng-if="member.twitter" href="https://twitter.com/{{ member.twitter }}"><i
-                        class="fa fa-2x fa-twitter"></i></a>
-                <a ng-if="member.googleplus" href="https://plus.google.com/{{ member.googleplus }}"><i
-                        class="fa fa-2x fa-google-plus"></i></a>
-                <a ng-if="member.github" href="https://github.com/{{ member.github }}"><i
-                        class="fa fa-2x fa-github"></i></a>
+            <div class="mdl-card__menu">
+                <a ng-if="member.twitter"
+                   class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                   href="https://twitter.com/{{ member.twitter }}"><span class="mdi mdi-twitter"></span></a>
+                <a ng-if="member.googleplus"
+                   class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                   href="https://plus.google.com/{{ member.googleplus }}"><span class="mdi mdi-google-plus"></span></a>
+                <a ng-if="member.github"
+                   class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"
+                   href="https://github.com/{{ member.github }}"><span class="mdi mdi-github-face"></span></a>
             </div>
         </div>
     </div>

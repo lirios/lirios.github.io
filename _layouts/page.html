@@ -1,11 +1,47 @@
 ---
-layout: default
+layout: base
 ---
 
-<article class="page">
-  <header class="primary">
-    <h1 class="primary-text">{{ page.title | escape }}</h1>
-  </header>
+<style>
+  .transparent {
+    background-color: transparent;
+  }
 
-  {{ content | toc }}
-</article>
+  .liri-layout-transparent {
+    /*background: url('https://getmdl.io/assets/demos/transparent.jpg') center / cover;*/
+      background: url('{{ site.baseurl }}/images/parallax/bg2.png') center / cover;
+  }
+  
+  .liri-layout-transparent .mdl-layout__header,
+  .liri-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+    color: white;
+  }
+</style>
+
+<div class="liri-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <i class="icon-liri liri-bird pointer" onclick="location.href='{{ site.baseurl }}/'"></i>
+      <span class="mdl-layout-title pointer mdl-layout--large-screen-only"
+            onclick="location.href='{{ site.baseurl }}/'">Liri</span>
+      <span class="mdl-layout-title mdl-layout--small-screen-only">{{ page.title | escape }}</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      {% include large-screen-nav.html %}
+    </div>
+  </header>
+  <!-- Mobile navigation -->
+  {% include mobile-nav.html %}
+  <div class="liri-ribbon transparent"></div>
+  <main class="liri-main mdl-layout__content">
+    <div class="mdl-layout__container">
+      <a name="top"></a>
+      {{ content | toc }}
+      {% include footer.html %}
+    </div>
+  </main>
+</div>

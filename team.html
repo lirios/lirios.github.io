@@ -28,10 +28,10 @@ theme: blue-light_blue
     }
 </style>
 
-<!--add moment and moment-timezone js libraries, needed by team.js-->
-<script src="{{ site.baseurl }}/js/moment.min.js"></script>
-<script src="{{ site.baseurl }}/js/moment-timezone.min.js"></script>
-<!--js providing angular module-->
+<!-- Moment -->
+<script src="{{ site.baseurl }}/js/bower_components/moment/min/moment.min.js"></script>
+<script src="{{ site.baseurl }}/js/bower_components/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+<!-- Angular controller -->
 <script src="{{ site.baseurl }}/js/team.js"></script>
 
 <div class="mdl-grid" ng-app="team" ng-controller="teamController as team">

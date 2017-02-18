@@ -49,17 +49,13 @@ layout: base
       <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
       <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
         <div class="mdl-grid" style="border-bottom: solid rgba(0,0,0,0.12) 1px">
-          <div class="mdl-cell mdl-cell--1-col mdl-cell--middle">
-            <a href="javascript: history.go(-1)" class="primary-icon">
-              <button class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons">arrow_back</i>
-              </button>
+          <div class="mdl-cell mdl-cell--11-col" style="text-align: left">
+            <a href="javascript: history.go(-1)" class="mdl-button mdl-js-button mdl-button--icon primary-icon">
+              <i class="material-icons">arrow_back</i>
             </a>
+            <span style="font-size: 18px; padding-left: 8px; vertical-align: middle">{{ page.title }}</span>
           </div>
-          <div class="mdl-cell mdl-cell--10-col mdl-cell--middle">
-            <span style="font-size: 18px">{{ page.title }}</span>
-          </div>
-          <div class="mdl-cell mdl-cell--1-col mdl-cell--middle primary-icon">
+          <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-phone primary-icon" style="text-align: right; padding-right: 8px;">
             <button class="mdl-button mdl-js-button mdl-button--icon">
               <i class="material-icons">share</i>
             </button>

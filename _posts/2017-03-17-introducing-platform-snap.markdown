@@ -2,7 +2,7 @@
 
 layout: post
 title: "Introducing the Liri Platform Snap"
-date: 2017-01-28 19:27:00 +0100
+date: 2017-03-17 22:20:00 +0100
 author: timsueberkrueb
 categories: blog
 tags: announcement snap

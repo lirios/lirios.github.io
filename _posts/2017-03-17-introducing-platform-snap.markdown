@@ -66,7 +66,7 @@ Checkout [the code on GitHub][platform-snap-gh] to see how it's all put
 ##### Credits
 
 At this point, we'd like to send out a big *thank you* to the kind folks at
-Canonical who where super supportive and helped us to accomplish this milestone.
+Canonical who were super supportive and helped us to accomplish this milestone.
 
 [fluid-gh]: https://github.com/lirios/fluid
 [snapd-install]: https://snapcraft.io/docs/core/install

@@ -1,0 +1,111 @@
+---
+layout: post
+title: "Flatpak runtime and apps"
+date: 2017-04-12 22:28:00 +0100
+author: plfiorini
+categories: blog
+tags: announcement flatpak
+style: blue.css
+navitem: nav-blog
+---
+
+We are proud to introduce Liri runtime and apps on Flatpak!
+
+[Flatpak][flatpak] is a new technology for building and installing desktop applications
+and we are working on getting our [cross-platform applications][liri-io-apps] and runtime packaged.
+
+The first milestone has been reached and we now have the Liri runtime with all the common dependencies
+for the apps, the SDK bits to build the apps with, as well as the following apps:
+
+* Browser
+* Calculator
+* Files
+* Text
+
+## Try it out
+
+[Flatpak][flatpak] is very easy to use: the first time you install an application it will download
+and install the dependencies.
+
+We have also prepared files to make the installation fast and easy.
+
+## Install the runtime
+
+When an app is installed, the runtime is automatically downloaded and installed so you usually
+don't need to perform the following actions.
+
+Anyway for the sake of completeness here's the steps.
+
+First you need to add the remote repository:
+
+```sh
+flatpak --user remote-add liri https://repo.liri.io/flatpak/liri.flatpakrepo
+```
+
+Install the runtime:
+
+```sh
+flatpak --user install liri io.liri.Platform
+```
+
+Pictures are worth thousand words so here's a [video][asciinema-runtime].
+
+## Install the apps
+
+Install Browser:
+
+```sh
+flatpak --user install https://repo.liri.io/flatpak/io.liri.Browser.flatpakref
+```
+
+Install Calculator:
+
+```sh
+flatpak --user install https://repo.liri.io/flatpak/io.liri.Calculator.flatpakref
+```
+
+Install Files:
+
+```sh
+flatpak --user install https://repo.liri.io/flatpak/io.liri.Files.flatpakref
+```
+
+Install Text:
+
+```sh
+flatpak --user install https://repo.liri.io/flatpak/io.liri.Text.flatpakref
+```
+
+A video of the procedure is [here][asciinema-apps]
+
+## Run the apps
+
+Run Browser:
+
+```sh
+flatpak run io.liri.Browser
+```
+
+Run Calculator:
+
+```sh
+flatpak run io.liri.Calculator
+```
+
+Run Files:
+
+```sh
+flatpak run io.liri.Files
+```
+
+Run Text:
+
+```sh
+flatpak run io.liri.Text
+```
+
+
+[flatpak]: http://flatpak.org/
+[liri-io-apps]: https://liri.io/apps/
+[asciinema-runtime]: https://asciinema.org/a/113001
+[asciinema-apps]: 

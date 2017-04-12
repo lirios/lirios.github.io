@@ -22,6 +22,9 @@ for the apps, the SDK bits to build the apps with, as well as the following apps
 * Files
 * Text
 
+Current builds are meant for testing, soon we'll add more apps and release a stable branch
+of the runtime and SDK.
+
 ## Try it out
 
 [Flatpak][flatpak] is very easy to use: the first time you install an application it will download
@@ -108,4 +111,4 @@ flatpak run io.liri.Text
 [flatpak]: http://flatpak.org/
 [liri-io-apps]: https://liri.io/apps/
 [asciinema-runtime]: https://asciinema.org/a/113001
-[asciinema-apps]: 
+[asciinema-apps]: https://asciinema.org/a/113002

@@ -14,9 +14,9 @@ membersDataDict["{{member.name}}"] = {};
 
 // API URL
 {% if jekyll.environment == 'production' %}
-var apiUrl = '{{ site.baseurl }}/api/team';
+var apiUrl = '{{ site.baseurl }}/backend/api/team';
 {% else %}
-var apiUrl = 'http://127.0.0.1:8080/team';
+var apiUrl = 'http://127.0.0.1:8080/api/team';
 {% endif %}
 
 //add angular app

@@ -1,5 +1,9 @@
 /*** Font ***/
 
+html, body {
+  font-family: "Roboto", sans-serif;
+}
+
 @font-face {
   font-family: 'liri';
   src:  url('{{ site.baseurl }}/fonts/liri/liri.eot?eue1d8');

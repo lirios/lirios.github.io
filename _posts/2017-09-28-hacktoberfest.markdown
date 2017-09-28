@@ -14,7 +14,7 @@ organized by [DigitalOcean][digitalocean] in partnership with [GitHub][github].
 
 Liri is partecipating in this year's [Hacktoberfest][hacktoberfest].
 
-Submit a Pull Request between October 1 and October 31, in any timezone,
+Submit **four** Pull Requests between October 1 and October 31, in any timezone,
 to earn a limited edition T-shirt.
 
 Here's the [list][list] of issues up for grab.

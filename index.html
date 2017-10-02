@@ -12,7 +12,28 @@ layout: default
     width: auto;
     background-color: #ffffff;
   }
-
+    
+  .liri-blog {
+    width: auto;
+    background: #575757;
+  }
+    
+  #news-header .mdl-typography--text-left {
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+  }
+    
+  .liri-blog .mdl-grid{
+    margin: 0 auto;
+        
+  }
+    
+  .liri-blog .mdl-card__title-text,
+  .liri-blog p {
+    text-align: left;
+  }
+    
   .liri-laptop {
     color: #ffffff;
   }
@@ -47,7 +68,7 @@ layout: default
     margin-right: 32px;
     text-align: justify;
   }
-
+    
   .md-48 {
     font-size: 64px;
   }
@@ -106,6 +127,39 @@ layout: default
       </div>
     </div>
   </div>
+</div>
+
+<div class="liri-blog">
+    <div class="liri-features-section">
+        <div class="mdl-grid" id="news-header">
+            <h3 class="mdl-typography--text-left">
+                News
+                <i class="material-icons mdl-badge mdl-badge--overlap" data-badge="3">announcement</i>
+            </h3>
+        </div>
+        <div class="mdl-grid">
+            {% for post in site.posts limit:3 %}
+            {% assign author = site.data.authors[post.author] %}
+              <div class=" mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--1-offset-tablet">
+                <div class="mdl-card__title no-padding-bottom">
+                  <h2 class="mdl-card__title-text">{{ post.title }}</h2>
+                </div>
+                <div class="mdl-card__supporting-text mdl-card--expand no-padding-top no-padding-bottom primary-text">
+                  <p class="secondary-text">{{ post.date | date_to_string }} • {{ author.name }}</p>
+                  <p>{{ post.excerpt }}</p>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+                </div>
+                <div class="mdl-card__menu">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 

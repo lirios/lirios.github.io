@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Files 0.2.0"
+date: 2018-02-12 08:14:00 +0200
+author: plfiorini
+categories: blog
+tags: announcement release files
+style: blue.css
+navitem: nav-blog
+---
+
+We are proud to announce the immediate availability of Files 0.2.0, the Liri OS file manager.
+
+##### Features
+
+* Refactor dialogs
+* Fix search card focus and height
+* Don't move actions into the overflow menu
+* Add Qbs build system
+* Quit on last window closed
+* Set WM_CLASS on X11
+* Fix taglib dependency check
+* Create resources from qbs
+* Add releases and screenshots to appdata file
+
+##### Download
+
+You can download the source tarball from [GitHub](https://github.com/lirios/files/releases/download/v0.2.0/liri-files-0.2.0.tar.xz)
+
+**SHA256 checksum:** `18d47e0cf3b7cd2f20d79801acd2b5f610837fafdb129714d4d00b0e8bcde993`

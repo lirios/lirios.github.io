@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Text 0.3.0"
+date: 2018-05-13 18:42:00 +0200
+author: plfiorini
+categories: blog
+tags: announcement release text
+style: blue.css
+navitem: nav-blog
+---
+
+We are proud to announce the immediate availability of Text 0.3.0.
+
+##### Features
+
+* Fix errors discovered by Clazy
+* Fix memory leaks
+* Follow Fluid 1.0 changes
+* Allow cross-language references to define-regexes with \%{lang:id}
+* Experimental QML highlighting
+* Update appdata file
+* Update desktop file
+* Fix context menu positioning
+* Enable text selection by mouse in search overlay
+* Backward search (Shift+Enter in search field)
+* Use fixed line heights for file previews
+* Add Next/Prev buttons to search overlay
+* Add 8dp margin to the right of search overlay
+* Hide search overlay after 5 seconds without focus
+
+##### Download
+
+You can download the source tarball from [GitHub](https://github.com/lirios/text/releases/download/v1.1.0/liri-text-0.3.0.tar.xz)
+
+**SHA256 checksum:** `1171bfd298490a804520ab06f2ed0e5df0cffdfa7fad56fd032b8ba95b328718`
+
+Binaries:
+
+* [Liri_Text-x86_64-0.3.0.AppImage](https://github.com/lirios/text/releases/download/v0.3.0/Liri_Text-x86_64-0.3.0.AppImage) 336e552b61a0c37268535d80331b1300314447d08b1c982d5a9c20bbfa8431ec
+* [Liri_Text-0.3.0.dmg](https://github.com/lirios/text/releases/download/v0.3.0/Liri_Text-0.3.0.dmg) 2fa62b4429dfcbea938709ad11214b9c8d017a98fee3858e7ab011af161efdd9

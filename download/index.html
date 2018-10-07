@@ -96,31 +96,46 @@ pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri
     </p>
   </div>
   <div class="mdl-tabs__panel" id="flatpak-panel">
-    <p>We now have Flatpak <a href="https://github.com/lirios/flatpak">runtime</a> and apps. More information on our <a href="/blog/2017/04/12/flatpak.html">blog article</a>.</p>
-    <p>Install Browser:</p>
+    <p>We have two channels available: <strong>stable</strong> with official releases and <strong>unstable</strong> with nightly builds.</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>flatpak --user install https://repo.liri.io/flatpak/files/unstable/io.liri.Browser.flatpakref
-    </code></pre>
+    <p>First of all make sure you have Flatpak installed by following <a href="https://flatpak.org/setup/" target="_blank">this tutorial</a>.</p>
+
+    <p>Then install the repositories:</p>
+
+    <div class="language-sh highlighter-rouge">
+      <pre class="highlight">
+        <code>
+          flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+          flatpak remote-add --if-not-exists liri https://repo.liri.io/flatpak/files/liri.flatpakrepo
+        </code>
+      </pre>
     </div>
 
-    <p>Install Calculator:</p>
+    <p>Install apps from the <strong>stable</strong> channel:</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>flatpak --user install https://repo.liri.io/flatpak/files/unstable/io.liri.Calculator.flatpakref
-    </code></pre>
+    <div class="language-sh highlighter-rouge">
+      <pre class="highlight">
+        <code>
+          flatpak install -y liri io.liri.Calculator//stable
+          flatpak install -y liri io.liri.Terminal//stable
+          flatpak install -y liri io.liri.Text//stable
+        </code>
+      </pre>
     </div>
 
-    <p>Install Files:</p>
+    <p>Install apps from the <strong>unstable</strong> channel:</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>flatpak --user install https://repo.liri.io/flatpak/files/unstable/io.liri.Files.flatpakref
-    </code></pre>
-    </div>
-
-    <p>Install Text:</p>
-
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>flatpak --user install https://repo.liri.io/flatpak/files/unstable/io.liri.Text.flatpakref
-    </code></pre>
+    <div class="language-sh highlighter-rouge">
+      <pre class="highlight">
+        <code>
+          flatpak install -y liri io.liri.AppCenter//master
+          flatpak install -y liri io.liri.Browser//master
+          flatpak install -y liri io.liri.Calculator//master
+          flatpak install -y liri io.liri.Files//master
+          flatpak install -y liri io.liri.Terminal//master
+          flatpak install -y liri io.liri.Text//master
+        </code>
+      </pre>
     </div>
   </div>
 </div>
-
-

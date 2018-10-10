@@ -36,8 +36,8 @@ navitem: nav-download
       You can install the desktop and applications on Arch Linux using the <code>liri-unstable</code> repository.<br>
       Append the following lines to your <code>/etc/pacman.conf</code>:
     </p>
-    <pre class="language-markup">
-      <code class="language-markup">
+    <pre>
+      <code class="language-ini">
 [liri-unstable]
 SigLevel = Optional TrustAll
 Server = https://repo.liri.io/archlinux/unstable/$arch/
@@ -46,17 +46,17 @@ Server = https://repo.liri.io/archlinux/unstable/$arch/
     <p>
       Then run:
     </p>
-    <pre class="language-bash">
+    <pre>
       <code class="language-bash">
-pacman -Syu
+sudo pacman -Syu
       </code>
     </pre>
     <p>
       To install the shell and core apps:
     </p>
-    <pre class="language-bash">
+    <pre>
       <code class="language-bash">
-pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri-appcenter-git
+sudo pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri-appcenter-git
       </code>
     </pre>
     <p>
@@ -102,39 +102,33 @@ pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri
 
     <p>Then install the repositories:</p>
 
-    <div class="language-sh highlighter-rouge">
-      <pre class="highlight">
-        <code>
-          flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-          flatpak remote-add --if-not-exists liri https://repo.liri.io/flatpak/files/liri.flatpakrepo
-        </code>
-      </pre>
-    </div>
+    <pre>
+      <code class="language-bash">
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists liri https://repo.liri.io/flatpak/files/liri.flatpakrepo
+      </code>
+    </pre>
 
     <p>Install apps from the <strong>stable</strong> channel:</p>
 
-    <div class="language-sh highlighter-rouge">
-      <pre class="highlight">
-        <code>
-          flatpak install -y liri io.liri.Calculator//stable
-          flatpak install -y liri io.liri.Terminal//stable
-          flatpak install -y liri io.liri.Text//stable
-        </code>
-      </pre>
-    </div>
+    <pre>
+      <code class="language-bash">
+flatpak install -y liri io.liri.Calculator//stable
+flatpak install -y liri io.liri.Terminal//stable
+flatpak install -y liri io.liri.Text//stable
+      </code>
+    </pre>
 
     <p>Install apps from the <strong>unstable</strong> channel:</p>
 
-    <div class="language-sh highlighter-rouge">
-      <pre class="highlight">
-        <code>
-          flatpak install -y liri io.liri.Browser//master
-          flatpak install -y liri io.liri.Calculator//master
-          flatpak install -y liri io.liri.Files//master
-          flatpak install -y liri io.liri.Terminal//master
-          flatpak install -y liri io.liri.Text//master
-        </code>
-      </pre>
-    </div>
+    <pre>
+      <code class="language-bash">
+flatpak install -y liri io.liri.Browser//master
+flatpak install -y liri io.liri.Calculator//master
+flatpak install -y liri io.liri.Files//master
+flatpak install -y liri io.liri.Terminal//master
+flatpak install -y liri io.liri.Text//master
+      </code>
+    </pre>
   </div>
 </div>

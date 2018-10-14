@@ -9,14 +9,20 @@ navitem: nav-download
 <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/prism.css" media="screen,projection">
 <script data-default-language="markup" src="{{ site.baseurl }}/js/prism.js"></script>
 
+<p>
 Liri OS is available as an immutable tree with reliable updates
 and easy rollbacks.
+</p>
 
+<p>
 Right now the live image installs a traditional, package-based system,
 but if you are running Fedora Silverblue you can try the rpm-ostree based
 version of Liri OS today.
+</p>
 
+<p>
 First of all add the remote and pull the latest version:
+</p>
 
 <pre><code class="language-bash">
 ref=lirios/unstable/x86_64/desktop
@@ -32,18 +38,26 @@ for i in /etc/passwd /etc/group /etc/shadow /etc/fstab \
 done
 </code></pre>
 
+<p>
 If you have a separate `/home` mount point, you'll need to change that fstab copy to refer to `/var/home`.
+</p>
 
+<p>
 If you don't have a separate `/home` mount point, then you need to make sure that a symlink will be created:
+</p>
 
 <pre><code class="language-bash">
 echo 'L /var/home - - - - ../sysroot/home' > /ostree/deploy/lirios/deploy/${checksum}.0/etc/tmpfiles.d/00rpm-ostree.conf
 </code></pre>
 
+<p>
 and copy your home directory from the `fedora-workstation` deployment:
+</p>
 
 <pre><code class="language-bash">
 cp -a /sysroot/ostree/deploy/fedora-workstation/var/home/<USERNAME> /sysroot/ostree/deploy/lirios/var/home
 </code></pre>
 
+<p>
 (Replace <code>&lt;USERNAME&gt;</code> with your actual username)
+</p>

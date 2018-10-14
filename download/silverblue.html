@@ -15,28 +15,32 @@ version of Liri OS today.
 
 First of all add the remote and pull the latest version:
 
-```sh
+<pre><code class="language-bash">
 ref=lirios/unstable/x86_64/desktop
 ostree remote add --no-gpg-verify liri https://repo.liri.io/ostree/repo/
 ostree pull liri:$ref
 ostree admin os-init lirios
 ostree admin deploy --os=lirios --karg-proc-cmdline liri:$ref
 checksum=$(ostree rev-parse $ref)
-for i in /etc/passwd /etc/group /etc/shadow /etc/fstab /etc/default/grub /etc/locale.conf /etc/ostree/remotes.d/liri.conf; do cp $i /ostree/deploy/lirios/deploy/${checksum}.0/$i; done
-```
+for i in /etc/passwd /etc/group /etc/shadow /etc/fstab \
+         /etc/default/grub /etc/locale.conf \
+         /etc/ostree/remotes.d/liri.conf; do
+    cp $i /ostree/deploy/lirios/deploy/${checksum}.0/$i
+done
+</code></pre>
 
 If you have a separate `/home` mount point, you'll need to change that fstab copy to refer to `/var/home`.
 
 If you don't have a separate `/home` mount point, then you need to make sure that a symlink will be created:
 
-```sh
+<pre><code class="language-bash">
 echo 'L /var/home - - - - ../sysroot/home' > /ostree/deploy/lirios/deploy/${checksum}.0/etc/tmpfiles.d/00rpm-ostree.conf
-```
+</code></pre>
 
 and copy your home directory from the `fedora-workstation` deployment:
 
-```sh
+<pre><code class="language-bash">
 cp -a /sysroot/ostree/deploy/fedora-workstation/var/home/<USERNAME> /sysroot/ostree/deploy/lirios/var/home
-```
+</code></pre>
 
-(Replace `<USERNAME>` with your actual username)
+(Replace <code><USERNAME></code> with your actual username)

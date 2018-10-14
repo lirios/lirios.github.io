@@ -47,7 +47,7 @@ If you don't have a separate <code>/home</code> mount point, then you need to ma
 <pre><code class="language-bash">echo 'L /var/home - - - - ../sysroot/home' > /ostree/deploy/lirios/deploy/${checksum}.0/etc/tmpfiles.d/00rpm-ostree.conf</code></pre>
 
 <p>
-and copy your home directory from the <code>fedora-workstation<code> deployment:
+and copy your home directory from the <code>fedora-workstation</code> deployment:
 </p>
 
 <pre><code class="language-bash">cp -a /sysroot/ostree/deploy/fedora-workstation/var/home/&lt;USERNAME&gt; /sysroot/ostree/deploy/lirios/var/home</code></pre>

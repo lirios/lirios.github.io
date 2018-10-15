@@ -134,11 +134,11 @@ layout: default
         <div class="mdl-grid" id="news-header">
             <h3 class="mdl-typography--text-left">
                 News
-                <i class="material-icons mdl-badge mdl-badge--overlap" data-badge="3">announcement</i>
+                <i class="material-icons mdl-badge mdl-badge--overlap" data-badge="6">announcement</i>
             </h3>
         </div>
         <div class="mdl-grid">
-            {% for post in site.posts limit:3 %}
+            {% for post in site.posts limit:6 %}
             {% assign author = site.data.authors[post.author] %}
               <div class=" mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--1-offset-tablet">
                 <div class="mdl-card__title no-padding-bottom">

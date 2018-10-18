@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Text 0.4.0"
+date: 2018-10-18 22:50:00 +0200
+author: plfiorini
+categories: blog
+tags: announcement release text
+style: blue.css
+navitem: nav-blog
+---
+
+We are proud to announce the immediate availability of Text 0.4.0.
+
+##### Features
+
+* Add versioning to the languages database.
+* Read language metadata only for new and changed spec files.
+* Generate resources with qbs.
+* Fix icons installation.
+* Fix translations installation.
+* Fix build on WinRT.
+* Update translations.
+
+##### Download
+
+You can download the source tarball from [GitHub](https://github.com/lirios/text/releases/download/v0.4.0/liri-text-0.4.0.tar.xz)
+
+**SHA256 checksum:** `d48a2d4b40b704507a14d91376656b00e13a495fa1f6e19bf10e45154d652bcd`
+
+Binaries:
+
+* [Liri_Text-x86_64-0.4.0.AppImage](https://github.com/lirios/text/releases/download/v0.4.0/Liri_Text-x86_64-0.3.0.AppImage) `c1eb6b4c9c634ff1ee26430f25d95ce89b3f7afe226db7d6d8265e98991ae923`
+* [Liri_Text-0.4.0.dmg](https://github.com/lirios/text/releases/download/v0.4.0/Liri_Text-0.4.0.dmg) `def76de6f967720f8bd6ed9776da993ad024ad89595f8b0092a48afc444426e5`

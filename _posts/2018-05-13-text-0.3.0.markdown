@@ -30,7 +30,7 @@ We are proud to announce the immediate availability of Text 0.3.0.
 
 ##### Download
 
-You can download the source tarball from [GitHub](https://github.com/lirios/text/releases/download/v1.1.0/liri-text-0.3.0.tar.xz)
+You can download the source tarball from [GitHub](https://github.com/lirios/text/releases/download/v0.3.0/liri-text-0.3.0.tar.xz)
 
 **SHA256 checksum:** `1171bfd298490a804520ab06f2ed0e5df0cffdfa7fad56fd032b8ba95b328718`
 

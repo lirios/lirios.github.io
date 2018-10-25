@@ -32,6 +32,15 @@ navitem: nav-download
 
   <div class="mdl-tabs__panel is-active" id="archlinux-panel">
     <p>
+      You can install the desktop and applications on Arch Linux from AUR.
+    </p>
+    <p>
+      Make sure you have <code>pacaur</code> <a href="https://www.ostechnix.com/install-pacaur-arch-linux/" target="_blank">installed</a>
+      and then install the <code>liri-git-meta</code> meta package.
+    </p>
+    <pre><code class="language-bash">pacaur -S liri-git-meta</code></pre>
+<!--
+    <p>
       You can install the desktop and applications on Arch Linux using the <code>liri-unstable</code> repository.<br>
       Append the following lines to your <code>/etc/pacman.conf</code>:
     </p>
@@ -62,6 +71,7 @@ sudo pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git
       Now you can log into the desktop from <code>SDDM</code> or <code>GDM</code>, select <code>Liri</code> from the session
       menu and type your password.
     </p>
+-->
   </div>
   <div class="mdl-tabs__panel" id="iso-panel">
     <h5>Download</h5>

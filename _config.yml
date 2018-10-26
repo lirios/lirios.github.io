@@ -28,6 +28,7 @@ social:
     - https://plus.google.com/u/0/communities/115722443491803015565
     - https://www.facebook.com/Liri-935614733238741
     - https://twitter.com/liridev
+    - https://medium.com/liridev
 google_site_verification: true
 repository: lirios/lirios.github.io
 github:
@@ -41,6 +42,7 @@ social_networks:
   facebook: Liri-935614733238741
   youtube: UCYtVjJpp1ORWhytmYQEPNig
   reddit: liri
+  medium: liridev
 
 # Build settings
 markdown: kramdown

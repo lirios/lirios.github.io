@@ -1,0 +1,58 @@
+---
+layout: post
+title: "Fluid 1.1.0"
+date: 2018-10-28 05:00:00 +0100
+author: plfiorini
+categories: blog
+tags: announcement release fluid
+style: blue.css
+navitem: nav-blog
+---
+
+Fluid is our toolkit for cross-platform and responsive applications development that supports the Material Design design language.
+
+It replaces Papyros' [qml-material](https://github.com/papyros/qml-material) which was using QtQuick Controls 1.
+
+We aim to maintain API compatibility until the next major release.
+
+##### Features
+
+* Allow to skip building QML modules
+* Install desktop entry and AppStream metadata for the demo
+* Enable searching for icons in the demo app
+* Refresh window decoration when the color changes
+* AppBar custom content
+* Change tool bar and decoration colors
+* NavigationDrawer support for convergence
+* Demo: Convergent navigation drawer
+* SearchBar: expose font property
+* AppBar: Add extendedContent property to add components under the row containing the title and actions
+* AppBar: Add extendedContentHeight property that holds the height of the extended content
+* AppToolBar: Add appBarHeight property that holds the calculated height of the AppBar considering its extended content
+* Set shortcut to go back action
+* Add PageSidebar
+* Add Chip
+* Toggle overflow menu whith the Menu button
+* AppBar: Add property AppBar::overflowMenuVisible to know whether the overflow menu is open or not
+* Fix FloatingActionButton background
+* Add iOS support
+* Support Qt static builds
+* Demo: Warn that system icons might not be available
+* Allow non-visual children in TabbedPage
+* Demo: Remove Universal styling
+* Demo: Use a tool bar for the theme selector
+* Fix NavigationListView being empty
+* SnackBar: Fix SnackBar form factor detection, resulting in `fullWidth` default value being correctly set
+* SnackBar: Implement SnackBar as a Popup making it always stack on top of the window contents
+* ListItem: Do not calculate ListItem.implicitHeight
+
+You can read the detailed change log from the previous release [here](https://github.com/lirios/fluid/compare/v1.0.0..v1.1.0).
+
+##### Download
+
+You can download the source tarball from [GitHub][tarball]
+
+**SHA256 checksum:** `3f7d6ed5bc986878134c28bd1f78848a30494ad790863adaffbdc8b3fb73b1a6`
+
+
+[tarball]: https://github.com/lirios/fluid/releases/download/v1.1.0/fluid-1.1.0.tar.xz

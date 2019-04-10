@@ -38,6 +38,8 @@ social_networks:
   facebook: Liri-935614733238741
   youtube: UCYtVjJpp1ORWhytmYQEPNig
   reddit: liri
+  mastodon: @liri
+  matrix: "#liri:matrix.org"
 
 # Build settings
 markdown: kramdown

@@ -35,20 +35,19 @@ github:
   repo: "https://github.com/lirios/lirios.github.io"
 social_networks:
   github: lirios
-  googleplus:
-    page: 100355783508323292342
-    community: 115722443491803015565
   twitter: liridev
   facebook: Liri-935614733238741
   youtube: UCYtVjJpp1ORWhytmYQEPNig
   reddit: liri
   medium: liridev
+  mastodon: "@liri"
+  matrix: "#liri:matrix.org"
 
 # Build settings
 markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

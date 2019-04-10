@@ -40,7 +40,7 @@ social_networks:
   youtube: UCYtVjJpp1ORWhytmYQEPNig
   reddit: liri
   medium: liridev
-  mastodon: @liri
+  mastodon: "@liri"
   matrix: "#liri:matrix.org"
 
 # Build settings

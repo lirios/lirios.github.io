@@ -12,9 +12,8 @@ navitem: nav-download
 
 <p>
   You can try <code>Liri OS</code> with the live image and eventually install it from there, or
-  if you are already running <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a>,
-  you can add our repository and install the packages, build them yourself with <code>AUR</code>,
-  or build the source code.
+  use packages for <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> and
+  <a href="https://getfedora.org/" target="_blank">Fedora</a>, or build the source code.
 </p>
 
 <p>
@@ -24,58 +23,85 @@ navitem: nav-download
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
   <div class="mdl-tabs__tab-bar">
-    <a href="#archlinux-panel" class="mdl-tabs__tab is-active">Arch Linux</a>
+    <a href="#pkgs-panel" class="mdl-tabs__tab is-active">Packages</a>
     <a href="#iso-panel" class="mdl-tabs__tab">Images</a>
     <a href="#sources-panel" class="mdl-tabs__tab">Sources</a>
     <a href="#flatpak-panel" class="mdl-tabs__tab">Flatpak</a>
   </div>
 
-  <div class="mdl-tabs__panel is-active" id="archlinux-panel">
+  <div class="mdl-tabs__panel is-active" id="pkgs-panel">
+    <p>
+      Here instructions on how to install packages for Arch Linux and Fedora.
+    </p>
+    <p>
+      After installing the packages, you can log into the desktop from <code>SDDM</code> or <code>GDM</code>,
+      select <code>Liri</code> from the session menu and type your password.
+    </p>
+
+    <h5>Arch Linux</h5>
     <p>
       You can install the desktop and applications on Arch Linux from AUR.
     </p>
     <p>
       Install the <code>liri-git-meta</code> package with your favorite AUR too.
     </p>
-<!--
+
+    <h5>Fedora</h5>
     <p>
-      You can install the desktop and applications on Arch Linux using the <code>liri-unstable</code> repository.<br>
-      Append the following lines to your <code>/etc/pacman.conf</code>:
-    </p>
-    <pre>
-      <code class="language-ini">
-[liri-unstable]
-SigLevel = Optional TrustAll
-Server = https://repo.liri.io/archlinux/unstable/$arch/
-      </code>
-    </pre>
-    <p>
-      Then run:
+      You can install packages that are updated as soon as changes hit
+      the Git repositories, with the <code>liri-nightly</code> COPR repository.
     </p>
     <pre>
       <code class="language-bash">
-sudo pacman -Syu
+sudo dnf copr enable plfiorini/liri-nightly
       </code>
     </pre>
     <p>
-      To install the shell and core apps:
+      To install the shell:
     </p>
     <pre>
       <code class="language-bash">
-sudo pacman -S liri-shell-git liri-settings-git liri-terminal-git liri-files-git liri-appcenter-git
+sudo dnf install -y \
+    liri-networkmanager \
+    liri-platformtheme \
+    liri-power-manager \
+    liri-pulseaudio \
+    liri-screencast \
+    liri-screenshot \
+    liri-settings \
+    liri-shell \
+    liri-wallpapers \
+    qml-xwayland \
+    xdg-desktop-portal-liri \
+    paper-icon-theme \
+    liri-color-schemes
       </code>
     </pre>
     <p>
-      Now you can log into the desktop from <code>SDDM</code> or <code>GDM</code>, select <code>Liri</code> from the session
-      menu and type your password.
+      And core apps:
     </p>
--->
+    <pre>
+      <code class="language-bash">
+sudo dnf install -y \
+    liri-appcenter \
+    liri-calculator \
+    liri-files \
+    liri-terminal \
+    liri-browser \
+    liri-text
+      </code>
+    </pre>
   </div>
   <div class="mdl-tabs__panel" id="iso-panel">
     <h5>Download</h5>
     <p>
       Nightly live images are available <a href="https://repo.liri.io/images/nightly">here</a>.<br> The live image supports
-      <code>x86_64</code> and is based on <code>Arch Linux</code> and the binary packages from <code>liri-unstable</code>.
+      <code>x86_64</code> and is based on <code>Fedora</code> with the <code>liri-nightly</code> COPR repository.
+    </p>
+    <p>
+      The image can be used to install the operating system that users <code>rpm-ostree</code> and has
+      atomic updates. Check the <a href="https://ostree.readthedocs.io/en/latest/" target="_blank">OSTree documentation</a>
+      if you want to know more about it.
     </p>
     <h5>Information</h5>
     <ul>

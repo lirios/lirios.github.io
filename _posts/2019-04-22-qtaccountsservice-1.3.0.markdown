@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "QtAccountsService 1.2.0"
+title: "QtAccountsService 1.3.0"
 date: 2019-04-22 11:45:00 +0200
 author: plfiorini
 categories: blog

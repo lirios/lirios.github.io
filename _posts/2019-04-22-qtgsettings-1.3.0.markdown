@@ -26,4 +26,4 @@ c841cd92ef0af12a8c6c04b2e2819e4cf0fe74237c686c9e91ec1e6e1091012b  qtgsettings-1.
 You can download the source tarball from [GitHub][tarball]
 
 
-[tarball]: https://github.com/lirios/qtgsettings/releases/download/v1.2.0/qtgsettings-1.2.0.tar.xz
+[tarball]: https://github.com/lirios/qtgsettings/releases/download/v1.3.0/qtgsettings-1.3.0.tar.xz

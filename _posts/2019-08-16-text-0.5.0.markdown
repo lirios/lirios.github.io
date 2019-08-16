@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Text 0.5.0"
+date: 2019-08-16 14:00:00 +0200
+author: plfiorini
+categories: blog
+tags: announcement release text
+style: blue.css
+navitem: nav-blog
+---
+
+We are proud to announce the immediate availability of Text 0.5.0.
+
+##### Features
+
+* Migrate build system from the now deprecated Qbs to CMake
+* Add missing OARS information to appdata and remove deprecated .desktop suffix from component ID
+* Fix the translation loading by using the correct file name
+
+##### Download
+
+You can download the source tarball from [GitHub](https://github.com/lirios/text/releases/download/v0.5.0/liri-text-0.5.0.tar.xz)
+
+**SHA256 checksum:** `0fb771fe48807d772f85373e7ecc0c5978290605594f814cf6a430fa45e2dc67`

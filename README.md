@@ -1,11 +1,11 @@
 Liri Web site
 =============
 
-This is the Liri Web site based on [Jekyll](https://jekyllrb.com/).
+This Liri Web site is based on [Jekyll](https://jekyllrb.com/).
 
 ## Development setup
 
-Install the following stuff the first time:
+Install the following stuff, if the first time:
 
 ```sh
 gem install bundler

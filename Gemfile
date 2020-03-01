@@ -24,6 +24,7 @@ gem "nokogiri"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
 #   gem "jekyll-github-metadata", "~> 1.0"
-  gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
+  gem 'jekyll-redirect-from'
+  gem "jekyll-sitemap"
 end

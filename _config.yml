@@ -45,8 +45,9 @@ sass:
   sass_dir: _sass
   style: compressed
 plugins:
-  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.

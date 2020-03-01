@@ -3,10 +3,13 @@ layout: post
 title: "Liri OS 0.9.0"
 date: 2017-01-25 22:30:00 +0100
 author: plfiorini
-categories: blog
+categories: news
 tags: announcement release lirios
 style: blue.css
 navitem: nav-blog
+redirect_to: https://blog.liri.io/lirios-0.9.0/
+redirect_from:
+  - /blog/2017/01/25/lirios-0.9.0.html
 ---
 
 We are proud to announce the immediate availability of Liri OS 0.9.0.

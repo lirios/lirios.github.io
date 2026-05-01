@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { authors } from '@data/site';
+import { authorName, formatPostDate } from '@utils/posts';
+import SiteLayout from './SiteLayout.astro';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+---
+
+<SiteLayout title={post.data.title} variant="post">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose post-surface">
+    <header class="post-header">
+      <md-icon-button href="/blog/" aria-label="Back to news">
+        <md-icon>arrow_back</md-icon>
+      </md-icon-button>
+      <div>
+        <h1>{post.data.title}</h1>
+        <p>{formatPostDate(post.data.date)} · {authorName(post, authors)}</p>
+      </div>
+    </header>
+    <slot />
+  </article>
+</SiteLayout>

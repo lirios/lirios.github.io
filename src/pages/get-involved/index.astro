@@ -1,0 +1,110 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+
+const contributionAreas = [
+  {
+    icon: 'terminal',
+    title: 'Operating System',
+    text: 'Improve the Qt, C++, QML, Fluid, and platform code behind the desktop environment.',
+  },
+  {
+    icon: 'apps',
+    title: 'App Development',
+    text: 'Work on cross-platform apps built with Qt, C++, QML, Fluid, and related open libraries.',
+  },
+  {
+    icon: 'draw',
+    title: 'Design',
+    text: 'Turn ideas into mockups, design specs, and clear bug reports.',
+  },
+  {
+    icon: 'translate',
+    title: 'Translations',
+    text: 'Help make Liri available to more people in their language.',
+  },
+];
+---
+
+<SiteLayout title="Get Involved with Liri" variant="content">
+  <header class="page-heading">
+    <p class="eyebrow">Community</p>
+    <h1>Get Involved</h1>
+    <p>
+      Liri is built by team members and contributors in their spare time.
+      Design, code, translations, testing, documentation, and funding all help.
+    </p>
+  </header>
+
+  <section class="section-band">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2>Funding</h2>
+          <p>Support ongoing development and targeted issue work.</p>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <article class="card">
+          <md-elevation></md-elevation>
+          <div class="card-body">
+            <h3>General Funding</h3>
+            <p>
+              Support the ongoing crowdfunding campaign on Bountysource Salt.
+              Choose an amount, get rewards, and help the project reach its goals.
+            </p>
+          </div>
+          <div class="card-actions">
+            <md-filled-tonal-button href="https://salt.bountysource.com/teams/liri" target="_blank">Bountysource Salt</md-filled-tonal-button>
+          </div>
+        </article>
+        <article class="card">
+          <md-elevation></md-elevation>
+          <div class="card-body">
+            <h3>Targeted Funding</h3>
+            <p>
+              Bountysource puts funds in the hands of developers by rewarding
+              fixes and features on specific issues.
+            </p>
+          </div>
+          <div class="card-actions">
+            <md-filled-tonal-button href="https://www.bountysource.com/teams/liri/issues" target="_blank">Bountysource</md-filled-tonal-button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band surface">
+    <div class="section-inner">
+      <div class="grid four">
+        {contributionAreas.map((area) => (
+          <article class="feature-card">
+            <md-icon>{area.icon}</md-icon>
+            <h3>{area.title}</h3>
+            <p>{area.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="section-inner prose">
+      <h2>How to Become a Translator</h2>
+      <p>
+        English is the source language. You must be able to translate from
+        English to your desired language.
+      </p>
+      <ol>
+        <li>Sign up for an account on <a href="https://www.transifex.com/signup/" target="_blank">Transifex</a>.</li>
+        <li>Verify your email, log in, and open the <a href="https://www.transifex.com/lirios/public/" target="_blank">Liri project page</a>.</li>
+        <li>Choose the language you want to translate or request a new language.</li>
+        <li>If your desired language exists, open it and click <strong>Join Team</strong>.</li>
+        <li>Choose the resource you want to work on.</li>
+        <li>Click <strong>Translate Now</strong> to use the Transifex editor, or download and upload files manually.</li>
+      </ol>
+      <md-filled-button href="https://www.transifex.com/lirios/public/" target="_blank">Translate</md-filled-button>
+    </div>
+  </section>
+</SiteLayout>

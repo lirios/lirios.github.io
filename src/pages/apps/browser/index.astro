@@ -1,0 +1,75 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Liri Browser" variant="content">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose">
+    <h1>Liri Browser</h1>
+    <p>
+      Liri Browser is a cross-platform, Material Design web browser, currently
+      in <span class="chip">alpha</span> stage.
+    </p>
+    <p>
+      The goal is a minimal and simple browser that gets out of your way and
+      lets you concentrate on the content.
+    </p>
+
+    <h2>Features</h2>
+    <div class="image-grid">
+      <section>
+        <h3>Simple</h3>
+        <img src="/images/apps/browser/screen_downloads_01.png" alt="Liri Browser downloads view" />
+        <p>Liri Browser provides the features you expect while keeping the interface focused.</p>
+      </section>
+      <section>
+        <h3>Yet Unique</h3>
+        <img src="/images/apps/browser/screen_theme_color_01.png" alt="Liri Browser theme color" />
+        <p>Websites that provide a theme color can tint the browser toolbar.</p>
+      </section>
+      <section>
+        <h3>Privacy</h3>
+        <img src="/images/apps/browser/screen_incognito_01.png" alt="Liri Browser incognito mode" />
+        <p>Liri Browser does not track you or collect data about your browser usage.</p>
+      </section>
+      <section>
+        <h3>More</h3>
+        <img src="/images/apps/browser/screen_settings_01.png" alt="Liri Browser settings" />
+        <p>A sane set of options lets you customize the browser without losing focus.</p>
+      </section>
+    </div>
+
+    <h2>Contribute</h2>
+    <p>
+      Liri Browser is a community-driven open-source project. Contributions can
+      include design, code, translations, bug reports, and testing.
+    </p>
+
+    <h3>Design</h3>
+    <p>
+      If you are a designer, mockups, sketches, and graphics are valuable to the
+      project. Check the <a href="https://github.com/lirios/browser/issues">GitHub issue list</a>.
+    </p>
+
+    <h3>Code</h3>
+    <div class="image-grid">
+      <img src="/images/apps/browser/screen_qtcreator_dev_01.png" alt="Liri Browser development in Qt Creator" />
+      <div>
+        <p>
+          Liri Browser is written using Qt, C++, QtQuick, and QML. QtQuick
+          Controls 2 and <a href="https://github.com/lirios/fluid">Fluid</a>
+          provide the Material Design interface.
+        </p>
+        <pre><code>git clone https://github.com/lirios/browser</code></pre>
+        <p>
+          <md-filled-tonal-button href="https://github.com/lirios/browser/wiki/Development-Setup">Get Started</md-filled-tonal-button>
+          <md-outlined-button href="https://github.com/lirios/browser">Fork on GitHub</md-outlined-button>
+        </p>
+      </div>
+    </div>
+
+    <h3>Translations</h3>
+    <p>Help translate Liri Browser into your language.</p>
+    <md-filled-button href="/get-involved/">Get Involved</md-filled-button>
+  </article>
+</SiteLayout>

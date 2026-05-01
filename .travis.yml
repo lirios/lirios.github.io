@@ -1,13 +1,12 @@
-language: ruby
+language: node_js
 
-rvm:
-  - 2.4.5
+node_js:
+  - 22
 
 sudo: false
 
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     # DEPLOY_USER
     - secure: "cnBiB0a72KSO3A8+5lZGxmX1aIvNwa1ZWN7pP3xHXFSJUZtnYce+UxQnHw+nvIkn0try2VloFYC4n7QPgmt9ZAtxSYjEIj7vZHYi5lMFoZ7+pPLtj9XhYqdDnf2vH48I23fbm6VOducysk+Ty4vg2lKjyAAL0+gCEaXZPKBVDVZxQ0Zpw5MIBY3l4juohNAlnWD//4E1xYgnJSX9uSidJR/z1i259cF31Qg9/SzZDumMuJGSLmdMnm7peMp8IKkQfcpVcvBOwwPDSY4USkW9fSDHNCxVJKfPcgTwLpxpQOUf8cN0hhjvXi9RZBRugQ6pgUGlXNH8ZjU2ID/ytAg4prWkk1m1bOJGjCxxWFVF19t925HHqjWe62FfnijwdTBuHlQ3Csj1URoS3+ED8fqelFOmnfDZeh4W463fODMcUWQ3/MWmU/wyIk9ECTzkwisD5JzMuj+7wG1evz2xNIBo2zhFS26OIEo16h4FkffHSCTgAsKAwyPBfDPOJLyy+nmShUpECd5+NQAMMNpQ7q6DKkkQ4qyO6jjNJxVEAPsKdZxiGP+D2+R2pKSILfgV4z4Kw/hAYk/kb1bidbNAcXxGmo56eocYPxlv+T47PeS17qwFrMhug11aR0W+y3fj0I/XmZwTvzXMRsdyrWPTe62zl+Su+2WIt1KNGa2+10N3txQ="
     # DEPLOY_HOST
@@ -18,10 +17,8 @@ env:
     - secure: "yabM0/dGjchiu9QHDxfWGs+Zylvh2EV21OdCjQ4KiFI/38udL3t2FRCThQ7MmxyTkWcOoAf1g70wkBuXw6pFtODzXKWPU+2PsHmcWn0F9UvYFxQV2LNMJk+433/qGxpyuBiGJ5zhNSDL4OL1TDbIZpD/MJDx71r0H8c/IE4kvMIAYpGeqibycQtdrkD8Ez0UBV1UZFNssz8uNLPSvaPtBm+I+e9bjZqZDQ9LCrsGxlDEi1W/Y+2fOpMcEP/6AqZyRwvUfKjSCDlga53b02AcF2nBag8F9ad1vWaR1GXpxsuuMmnU1VI3Xkjw6mvxvpIrtjm87qHY2oBTTb+Yzkp2rJ1s1V5b+bGZjDkfib88xE/qb/I/6rwsvn0pxJTfcI/r1xH8vmjMk6Wi06xXLtA8gKByoy1hCECSRlGfcJO2tpsO0u7RzQDoPNqgAdE9vp6vYLMDC1zKR3dS7HnV6FOhTn9qyZszmnfPhkJTmMNz0hUqYiZ5RKwuaZxc9uFP9TKav8k7pDZRGH4R8omC+2eHBudlyE8c128Nq3zyjpH+YPluIiCwJz/9Qi96FXnLm8m74LqDATvuAaNm9+3qAEZlKbOYI98ZAKFHRpM2jackqZ3DTqepdX/Yc5y83et3XMpTvFs1m9+VvrM8ZzFXZcZR3nkc7hvI7ExWJUiDlGoUrfI="
 
 install:
-  - bundle install
-  - gem install html-proofer
-script: env JEKYLL_ENV=production bundle exec jekyll build
-#after_script: htmlproofer ./_site
+  - npm ci
+script: npm run build
 
 deploy:
   provider: script

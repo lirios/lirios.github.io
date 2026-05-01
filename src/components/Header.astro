@@ -1,0 +1,70 @@
+---
+import { navItems, site } from '@data/site';
+
+const currentPath = Astro.url.pathname;
+const currentSection = currentPath.split('/').filter(Boolean)[0] || 'home';
+const homeActive = currentSection === 'home';
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label={`${site.title} home`}>
+    <span class="brand-mark" aria-hidden="true">L</span>
+    <span class="brand-name">{site.title}</span>
+  </a>
+
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    {navItems.map((item) => (
+      <a
+        class:list={['nav-link', item.section === currentSection && 'is-active']}
+        href={item.href}
+        target={item.external ? '_blank' : undefined}
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
+
+  <md-icon-button
+    class="menu-button"
+    type="button"
+    aria-label="Open navigation"
+    aria-controls="site-drawer"
+    aria-expanded="false"
+    data-drawer-open
+  >
+    <md-icon>menu</md-icon>
+  </md-icon-button>
+</header>
+
+<div class="drawer-scrim" data-drawer-scrim></div>
+<aside class="site-drawer" id="site-drawer" data-site-drawer aria-label="Mobile navigation">
+  <div class="drawer-header">
+    <a class="brand drawer-brand" href="/" aria-current={homeActive ? 'page' : undefined}>
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <span class="brand-name">{site.title}</span>
+    </a>
+    <md-icon-button type="button" aria-label="Close navigation" data-drawer-close>
+      <md-icon>close</md-icon>
+    </md-icon-button>
+  </div>
+
+  <md-list>
+    <md-list-item type="link" href="/" aria-current={homeActive ? 'page' : undefined}>
+      <md-icon slot="start">home</md-icon>
+      <div slot="headline">Home</div>
+    </md-list-item>
+    {navItems.map((item) => (
+      <md-list-item
+        type="link"
+        href={item.href}
+        target={item.external ? '_blank' : undefined}
+        aria-current={item.section === currentSection ? 'page' : undefined}
+      >
+        <md-icon slot="start">
+          {item.section === 'blog' ? 'newspaper' : item.section === 'apps' ? 'apps' : item.section === 'screenshots' ? 'photo_library' : item.section === 'get-involved' ? 'groups' : item.section === 'download' ? 'download' : 'open_in_new'}
+        </md-icon>
+        <div slot="headline">{item.label}</div>
+      </md-list-item>
+    ))}
+  </md-list>
+</aside>

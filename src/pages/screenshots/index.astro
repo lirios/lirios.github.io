@@ -1,0 +1,31 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+
+const screenshots = [
+  { title: 'Desktop', image: '/images/screenshots/desktop.png' },
+  { title: 'Movie', image: '/images/screenshots/movie.png' },
+  { title: 'Multi Window Support', image: '/images/screenshots/multi-window.png' },
+  { title: 'Music App', image: '/images/screenshots/music1.png' },
+  { title: 'Terminal Instances', image: '/images/screenshots/terminal-instance.png' },
+];
+---
+
+<SiteLayout title="Screenshots" variant="centered">
+  <header class="page-heading">
+    <p class="eyebrow">Liri OS</p>
+    <h1>Screenshots</h1>
+    <p>A look at the desktop, apps, and multitasking experience.</p>
+  </header>
+
+  <section class="section-band">
+    <div class="section-inner screenshot-grid">
+      {screenshots.map((screenshot) => (
+        <figure class="card">
+          <md-elevation></md-elevation>
+          <img src={screenshot.image} alt={screenshot.title} loading="lazy" />
+          <figcaption class="card-body">{screenshot.title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+</SiteLayout>

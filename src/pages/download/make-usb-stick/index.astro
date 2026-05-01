@@ -1,0 +1,71 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Make a USB Stick" variant="post">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose">
+    <h1>Make a USB Stick</h1>
+    <p>
+      Using a USB flash drive is one of the best ways to test Liri OS and it is
+      also the only way to try it without touching your hard drives.
+    </p>
+    <p>Running Liri OS from USB flash drives is much faster than running it from a DVD.</p>
+    <p>
+      The following guide copies the image directly to the raw drive, replacing
+      everything including the MBR and destroying all partitions and data that
+      were there.
+    </p>
+    <p>
+      Start by downloading the live image from the download page. Get a
+      sufficiently large USB flash drive, then follow one of the methods below.
+    </p>
+
+    <h2>Linux and FreeBSD</h2>
+    <p>Open a terminal and find the device name of your USB flash drive:</p>
+    <pre><code class="language-bash">sudo fdisk -l</code></pre>
+    <p>You can identify the drive by size or by running the command before and after plugging in the USB flash drive.</p>
+    <p>Ensure the USB device is unmounted:</p>
+    <pre><code class="language-bash">umount /dev/sd[x]</code></pre>
+    <div class="alert alert-danger">
+      <strong>Verify the device name carefully. The next command erases everything on that drive.</strong>
+    </div>
+    <pre><code class="language-bash">dd if=/path/to/lirios-live-media.iso of=/dev/sd[x] bs=4M</code></pre>
+    <p>Use <code>/dev/sd[x]</code>, not <code>/dev/sd[x]1</code>.</p>
+    <div class="alert alert-warning">
+      <strong>Note:</strong> Some older firmware does not understand the isohybrid
+      hack where the fake partition offset starts at 0. See
+      <a href="https://bugs.archlinux.org/task/32189" target="_blank">this issue</a>
+      for a fix involving isohybrid.pl.
+    </div>
+
+    <h2>Windows</h2>
+    <p>
+      Download <a href="https://sourceforge.net/projects/win32diskimager/" target="_blank">ImageWriter</a>,
+      unzip it, and run it.
+    </p>
+    <div class="alert alert-danger">
+      <strong>Carefully identify the drive letter for your USB stick to avoid overwriting the wrong disk.</strong>
+    </div>
+    <p>
+      Rename the downloaded live image to <em>lirios-live-image.img</em> if
+      necessary so it appears in ImageWriter's file selection panel.
+    </p>
+    <p>
+      Run Win32DiskImager.exe, select the ISO file, select the correct USB drive
+      letter, and click <strong>Write</strong>.
+    </p>
+
+    <h2>macOS</h2>
+    <p>Open a terminal under Utilities and find the device name:</p>
+    <pre><code class="language-bash">diskutil list</code></pre>
+    <p>Unmount the drive:</p>
+    <pre><code class="language-bash">diskutil unmountDisk /dev/disk[x]</code></pre>
+    <div class="alert alert-danger">
+      <strong>Verify the device name carefully. The next command erases everything on that drive.</strong>
+    </div>
+    <pre><code class="language-bash">sudo dd if=/path/to/lirios-live-media.iso of=/dev/rdisk[x] bs=1m</code></pre>
+    <p>Eject it properly when finished:</p>
+    <pre><code class="language-bash">diskutil eject /dev/disk[x]</code></pre>
+  </article>
+</SiteLayout>

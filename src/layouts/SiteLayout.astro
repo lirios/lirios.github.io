@@ -1,0 +1,23 @@
+---
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  variant?: 'home' | 'content' | 'centered' | 'post' | 'plain';
+}
+
+const { title, description, variant = 'content' } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class:list={['site-shell', `site-shell-${variant}`]}>
+    <Header />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>

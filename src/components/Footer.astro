@@ -1,0 +1,37 @@
+---
+import { site, socialLinks } from '@data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <section>
+      <h2>{site.title}</h2>
+      <p>{site.description}</p>
+    </section>
+
+    <section>
+      <h2>Information</h2>
+      <ul>
+        <li><a href="/team/">Team</a></li>
+        <li><a href="/community/code-of-conduct/">Code of Conduct</a></li>
+        <li><a href="/community/governance-model/">Governance Model</a></li>
+        <li><a href="/org/cla/">Contributor License Agreements</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Social</h2>
+      <ul>
+        {socialLinks.map((link) => (
+          <li><a href={link.href}>{link.label}</a></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+  <md-divider></md-divider>
+  <p class="footer-legal">
+    &copy; {year} Liri. All trademarks and registered trademarks are the property of their respective owners.
+  </p>
+</footer>

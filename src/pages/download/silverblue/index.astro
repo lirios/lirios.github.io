@@ -1,0 +1,40 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fedora Silverblue" variant="post">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose">
+    <h1>Fedora Silverblue</h1>
+    <p>Liri OS is available as an immutable tree with reliable updates and easy rollbacks.</p>
+    <p>
+      Right now the live image installs a traditional, package-based system, but
+      if you are running Fedora Silverblue you can try the rpm-ostree based
+      version of Liri OS today.
+    </p>
+    <p>First add the remote and pull the latest version:</p>
+    <pre><code class="language-bash">ref=lirios/unstable/x86_64/desktop
+ostree remote add --no-gpg-verify liri https://repo.liri.io/ostree/repo/
+ostree pull liri:$ref
+ostree admin os-init lirios
+ostree admin deploy --os=lirios --karg-proc-cmdline liri:$ref
+checksum=$(ostree rev-parse $ref)
+for i in /etc/passwd /etc/group /etc/shadow /etc/fstab \
+         /etc/default/grub /etc/locale.conf \
+         /etc/ostree/remotes.d/liri.conf; do
+    cp $i /ostree/deploy/lirios/deploy/{'${checksum}'}.0/$i
+done</code></pre>
+    <p>
+      If you have a separate <code>/home</code> mount point, change that fstab
+      copy to refer to <code>/var/home</code>.
+    </p>
+    <p>
+      If you do not have a separate <code>/home</code> mount point, make sure a
+      symlink will be created:
+    </p>
+    <pre><code class="language-bash">echo 'L /var/home - - - - ../sysroot/home' > /ostree/deploy/lirios/deploy/{'${checksum}'}.0/etc/tmpfiles.d/00rpm-ostree.conf</code></pre>
+    <p>Then copy your home directory from the <code>fedora-workstation</code> deployment:</p>
+    <pre><code class="language-bash">cp -a /sysroot/ostree/deploy/fedora-workstation/var/home/&lt;USERNAME&gt; /sysroot/ostree/deploy/lirios/var/home</code></pre>
+    <p>Replace <code>&lt;USERNAME&gt;</code> with your actual username.</p>
+  </article>
+</SiteLayout>

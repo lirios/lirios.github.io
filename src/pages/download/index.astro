@@ -1,0 +1,140 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Download" variant="content">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose">
+    <h1>Download</h1>
+    <p>
+      You can try <code>Liri OS</code> with the live image and eventually
+      install it from there, use packages for
+      <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> and
+      <a href="https://getfedora.org/" target="_blank">Fedora</a>, or build the
+      source code.
+    </p>
+    <p>
+      Remember that <code>Liri OS</code> is currently in
+      <span class="chip">alpha</span> stage and there might be issues.
+    </p>
+
+    <div class="tabs-shell" data-tabs>
+      <md-tabs aria-label="Download options">
+        <md-secondary-tab id="packages-tab" aria-controls="packages-panel" active>Packages</md-secondary-tab>
+        <md-secondary-tab id="images-tab" aria-controls="images-panel">Images</md-secondary-tab>
+        <md-secondary-tab id="sources-tab" aria-controls="sources-panel">Sources</md-secondary-tab>
+        <md-secondary-tab id="flatpak-tab" aria-controls="flatpak-panel">Flatpak</md-secondary-tab>
+      </md-tabs>
+
+      <section class="tab-panel" id="packages-panel" role="tabpanel" aria-labelledby="packages-tab">
+        <p>Instructions for installing packages on Arch Linux and Fedora.</p>
+        <p>
+          After installing the packages, log into the desktop from
+          <code>SDDM</code> or <code>GDM</code>, select <code>Liri</code> from
+          the session menu, and type your password.
+        </p>
+
+        <h2>Arch Linux</h2>
+        <p>You can install the desktop and applications on Arch Linux from AUR.</p>
+        <p>Install the <code>liri-git-meta</code> package with your favorite AUR tool.</p>
+
+        <h2>Fedora</h2>
+        <p>
+          You can install packages that are updated as soon as changes hit the
+          Git repositories with the <code>liri-nightly</code> COPR repository.
+        </p>
+        <pre><code class="language-bash">sudo dnf copr enable plfiorini/liri-nightly</code></pre>
+        <p>To install the shell:</p>
+        <pre><code class="language-bash">sudo dnf install -y \
+    liri-networkmanager \
+    liri-platformtheme \
+    liri-power-manager \
+    liri-pulseaudio \
+    liri-screencast \
+    liri-screenshot \
+    liri-settings \
+    liri-shell \
+    liri-wallpapers \
+    qml-xwayland \
+    xdg-desktop-portal-liri \
+    paper-icon-theme \
+    liri-color-schemes</code></pre>
+        <p>And core apps:</p>
+        <pre><code class="language-bash">sudo dnf install -y \
+    liri-appcenter \
+    liri-calculator \
+    liri-files \
+    liri-terminal \
+    liri-browser \
+    liri-text</code></pre>
+      </section>
+
+      <section class="tab-panel" id="images-panel" role="tabpanel" aria-labelledby="images-tab" hidden>
+        <h2>Download</h2>
+        <p>
+          Nightly live images are available
+          <a href="https://repo.liri.io/images/nightly">here</a>. The live image
+          supports <code>x86_64</code> and is based on <code>Fedora</code> with
+          the <code>liri-nightly</code> COPR repository.
+        </p>
+        <p>
+          The image can be used to install the operating system that uses
+          <code>rpm-ostree</code> and has atomic updates. Check the
+          <a href="https://ostree.readthedocs.io/en/latest/" target="_blank">OSTree documentation</a>
+          if you want to know more about it.
+        </p>
+
+        <h2>Information</h2>
+        <ul>
+          <li><a href="/download/burn-dvd/">How to burn the live DVD</a></li>
+          <li><a href="/download/make-usb-stick/">Make USB stick</a></li>
+          <li><a href="/download/virtual-machines/">Virtual machines</a></li>
+          <li><a href="/download/silverblue/">OSTree on Fedora Silverblue</a></li>
+        </ul>
+
+        <h2>Hardware Support</h2>
+        <p>Hardware supported by open source drivers should work. Supported GPUs include:</p>
+        <ul>
+          <li>Intel: i915 or newer cards</li>
+          <li>AMD/ATI: open source driver except for cards supported by radeonsi</li>
+          <li>NVIDIA: cards supported by the nouveau open source driver</li>
+          <li>VMware</li>
+          <li>QEMU with QXL</li>
+        </ul>
+        <p>
+          VirtualBox does not currently support Wayland reliably. Use other
+          virtualization solutions such as
+          <a href="https://virt-manager.org/" target="_blank">virt-manager</a>.
+        </p>
+      </section>
+
+      <section class="tab-panel" id="sources-panel" role="tabpanel" aria-labelledby="sources-tab" hidden>
+        <p>Download source code from <a href="https://github.com/lirios">GitHub</a>.</p>
+      </section>
+
+      <section class="tab-panel" id="flatpak-panel" role="tabpanel" aria-labelledby="flatpak-tab" hidden>
+        <p>
+          Two channels are available: <strong>stable</strong> with official
+          releases and <strong>unstable</strong> with nightly builds.
+        </p>
+        <p>
+          First make sure you have Flatpak installed by following
+          <a href="https://flatpak.org/setup/" target="_blank">this tutorial</a>.
+        </p>
+        <p>Then install the repositories:</p>
+        <pre><code class="language-bash">flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists liri https://repo.liri.io/flatpak/files/liri.flatpakrepo</code></pre>
+        <p>Install apps from the <strong>stable</strong> channel:</p>
+        <pre><code class="language-bash">flatpak install -y liri io.liri.Calculator//stable
+flatpak install -y liri io.liri.Terminal//stable
+flatpak install -y liri io.liri.Text//stable</code></pre>
+        <p>Install apps from the <strong>unstable</strong> channel:</p>
+        <pre><code class="language-bash">flatpak install -y liri io.liri.Browser//master
+flatpak install -y liri io.liri.Calculator//master
+flatpak install -y liri io.liri.Files//master
+flatpak install -y liri io.liri.Terminal//master
+flatpak install -y liri io.liri.Text//master</code></pre>
+      </section>
+    </div>
+  </article>
+</SiteLayout>

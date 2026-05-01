@@ -1,0 +1,70 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Liri Text" variant="content">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose">
+    <h1>Liri Text</h1>
+    <p>
+      Liri Text is a cross-platform, Material Design text editor, currently in
+      <span class="chip">alpha</span> stage.
+    </p>
+    <p>
+      It aims to be a minimal and simple editor with the features expected from
+      a modern text editor.
+    </p>
+
+    <h2>Features</h2>
+    <div class="image-grid">
+      <section>
+        <h3>Straightforward</h3>
+        <img src="/images/apps/text/screen_start.png" alt="Liri Text start screen" />
+        <p>Liri Text has a straightforward UI so you can focus on your task.</p>
+      </section>
+      <section>
+        <h3>Solid</h3>
+        <img src="/images/apps/text/screen_editing_process_01.png" alt="Liri Text editing a file" />
+        <p>Basic editing features are built for code, configuration files, and prose.</p>
+      </section>
+      <section>
+        <h3>Syntax Highlighting</h3>
+        <img src="/images/apps/text/screen_highlighting_01.png" alt="Liri Text syntax highlighting" />
+        <p>
+          Syntax coloring supports a wide range of languages through
+          <a href="https://developer.gnome.org/gtksourceview/stable/lang-reference.html">GtkSourceView language definitions</a>.
+        </p>
+      </section>
+    </div>
+
+    <h2>Contribute</h2>
+    <p>
+      Contributions can include design, code, translations, bug reports, and
+      testing.
+    </p>
+
+    <h3>Design</h3>
+    <p>
+      Mockups and sketches are valuable. Start with the
+      <a href="https://github.com/lirios/text/issues?q=is%3Aissue+is%3Aopen+label%3A%22needs+design%22">GitHub issue list</a>.
+    </p>
+
+    <h3>Code</h3>
+    <div class="image-grid">
+      <img src="/images/apps/text/screen_qtcreator_dev_01.png" alt="Liri Text development in Qt Creator" />
+      <div>
+        <p>
+          Liri Text is written using Qt, C++, and QML. QtQuick Controls 2 and
+          <a href="https://github.com/lirios/fluid">Fluid</a> provide the
+          Material Design interface.
+        </p>
+        <pre><code>git clone https://github.com/lirios/text</code></pre>
+        <md-filled-tonal-button href="https://github.com/lirios/text">Fork on GitHub</md-filled-tonal-button>
+      </div>
+    </div>
+
+    <h3>Translations</h3>
+    <p>Help translate Liri Text into your language.</p>
+    <md-filled-button href="/get-involved/">Get Involved</md-filled-button>
+  </article>
+</SiteLayout>

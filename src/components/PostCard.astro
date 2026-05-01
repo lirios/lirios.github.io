@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { authors } from '@data/site';
+import { authorName, excerpt, formatPostDate, postUrl } from '@utils/posts';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="card post-card">
+  <md-elevation></md-elevation>
+  <div class="card-body">
+    <p class="eyebrow">{formatPostDate(post.data.date)} · {authorName(post, authors)}</p>
+    <h3><a href={postUrl(post)}>{post.data.title}</a></h3>
+    <p>{excerpt(post)}</p>
+  </div>
+  <div class="card-actions">
+    <md-text-button href={postUrl(post)}>Read More</md-text-button>
+  </div>
+</article>

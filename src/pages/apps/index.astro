@@ -1,0 +1,92 @@
+---
+import AppCard from '@components/AppCard.astro';
+import SiteLayout from '@layouts/SiteLayout.astro';
+
+const coreApps = [
+  {
+    title: 'Settings',
+    description: 'Settings is a tool to configure the system.',
+    image: '/images/apps/settings/screen_mainview_01.png',
+    repo: 'https://github.com/lirios/settings',
+  },
+  {
+    title: 'Terminal',
+    description: 'Terminal emulator for Liri OS.',
+    image: '/images/apps/terminal/terminal2.png',
+    repo: 'https://github.com/lirios/terminal',
+  },
+  {
+    title: 'Files',
+    description: 'Files is a tool for managing files.',
+    image: '/images/apps/files/screen_home_01.png',
+    repo: 'https://github.com/lirios/files',
+    download: 'https://repo.liri.io/flatpak/files/unstable/io.liri.Files.flatpakref',
+  },
+  {
+    title: 'App Center',
+    description: 'App Center allows you to install apps and update the OS.',
+    image: '/images/apps/appcenter/screen_mainview_01.png',
+    repo: 'https://github.com/lirios/appcenter',
+  },
+];
+
+const crossPlatformApps = [
+  {
+    title: 'Browser',
+    description: 'Liri Browser is a cross-platform, Material Design web browser.',
+    image: '/images/apps/browser/screen_theme_color_01.png',
+    href: '/apps/browser/',
+    download: 'https://repo.liri.io/flatpak/files/unstable/io.liri.Browser.flatpakref',
+  },
+  {
+    title: 'Text',
+    description: 'Liri Text is a cross-platform text editor for code and configuration files.',
+    image: '/images/apps/text/screen_highlighting_01.png',
+    href: '/apps/text/',
+    download: 'https://repo.liri.io/flatpak/files/unstable/io.liri.Text.flatpakref',
+  },
+  {
+    title: 'Calculator',
+    description: 'Liri Calculator is a cross-platform, Material Design calculator.',
+    image: '/images/apps/calculator/screen_downloads_01.png',
+    href: '/apps/calculator/',
+    download: 'https://repo.liri.io/flatpak/files/unstable/io.liri.Calculator.flatpakref',
+  },
+];
+---
+
+<SiteLayout title="Apps" variant="content">
+  <header class="page-heading">
+    <p class="eyebrow">Liri Apps</p>
+    <h1>Apps</h1>
+    <p>
+      Modern and flexible applications for Liri OS, with cross-platform apps
+      that can run beyond GNU/Linux desktops as development continues.
+    </p>
+  </header>
+
+  <section class="section-band">
+    <div class="section-inner prose">
+      <h2>Core System Apps</h2>
+      <p>Core apps are tightly integrated into Liri OS to provide the best experience.</p>
+      <div class="grid four">
+        {coreApps.map((app) => <AppCard {...app} />)}
+      </div>
+
+      <h2>Cross-Platform Apps</h2>
+      <p>
+        Cross-platform apps are designed from the ground up to work across
+        operating systems and form factors.
+      </p>
+      <div class="grid three">
+        {crossPlatformApps.map((app) => <AppCard {...app} />)}
+      </div>
+
+      <h2>Trying Them Out</h2>
+      <h3>From Source</h3>
+      <p>Get and build the apps from <a href="https://github.com/lirios">GitHub</a>.</p>
+      <h3>From a Repository</h3>
+      <p>Check the <a href="/download/">Download</a> section.</p>
+    </div>
+  </section>
+</SiteLayout>

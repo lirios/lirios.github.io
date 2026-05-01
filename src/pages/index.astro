@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '@components/PostCard.astro';
+import SiteLayout from '@layouts/SiteLayout.astro';
+import { sortedPosts } from '@utils/posts';
+
+const posts = sortedPosts(await getCollection('posts')).slice(0, 6);
+---
+
+<SiteLayout variant="home">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Liri</h1>
+        <p>An OS and apps built with modern design and features.</p>
+        <div class="hero-actions">
+          <a class="button filled hero-download" href="/download/">
+            <md-icon>download</md-icon>
+            Download
+          </a>
+          <a class="button outlined" href="/apps/">Explore Apps</a>
+        </div>
+        <p class="eyebrow">Nightly alpha · 1.2 GB</p>
+      </div>
+      <div class="hero-media">
+        <img src="/images/home/screenshot_desktop.png" alt="Liri desktop screenshot" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band surface">
+    <div class="section-inner">
+      <div class="grid three">
+        <article class="feature-card">
+          <md-icon>bolt</md-icon>
+          <h3>Modern Features</h3>
+          <p>
+            Atomic upgrades, powerful notifications, OSTree, Wayland, Qt, and
+            other current Linux technologies are part of the desktop foundation.
+          </p>
+        </article>
+        <article class="feature-card">
+          <md-icon>groups</md-icon>
+          <h3>User Experience Focused</h3>
+          <p>
+            Material Design principles guide a responsive interface that feels
+            coherent across shells, system tools, and applications.
+          </p>
+        </article>
+        <article class="feature-card">
+          <md-icon>settings</md-icon>
+          <h3>Open Source Governance</h3>
+          <p>
+            Liri is a meritocratic community building software together under
+            open governance and Free Software values.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band dark">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2>News</h2>
+          <p>Recent project updates and release notes.</p>
+        </div>
+        <md-filled-tonal-button href="/blog/">All News</md-filled-tonal-button>
+      </div>
+      <div class="grid three">
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+    </div>
+  </section>
+</SiteLayout>

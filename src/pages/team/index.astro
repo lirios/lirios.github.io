@@ -1,0 +1,40 @@
+---
+import { authors } from '@data/site';
+import SiteLayout from '@layouts/SiteLayout.astro';
+
+const team = Object.values(authors);
+---
+
+<SiteLayout title="Team" variant="centered">
+  <header class="page-heading">
+    <p class="eyebrow">Community</p>
+    <h1>Team</h1>
+    <p>People who have contributed to Liri and its applications.</p>
+  </header>
+
+  <section class="section-band">
+    <div class="section-inner team-grid">
+      {team.map((member) => (
+        <article class="card team-card">
+          <md-elevation></md-elevation>
+          <img src={member.picture} alt={member.name} loading="lazy" />
+          <div class="card-body">
+            <h3>{member.name}</h3>
+          </div>
+          <div class="card-actions">
+            {'github' in member && member.github && (
+              <md-icon-button href={`https://github.com/${member.github}`} aria-label={`${member.name} on GitHub`}>
+                <md-icon>code</md-icon>
+              </md-icon-button>
+            )}
+            {'twitter' in member && member.twitter && (
+              <md-icon-button href={`https://twitter.com/${member.twitter}`} aria-label={`${member.name} on Twitter`}>
+                <md-icon>alternate_email</md-icon>
+              </md-icon-button>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</SiteLayout>

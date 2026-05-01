@@ -1,0 +1,57 @@
+---
+import SiteLayout from '@layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Liri Calculator" variant="content">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose">
+    <h1>Liri Calculator</h1>
+    <p>
+      Liri Calculator is a cross-platform, Material Design calculator,
+      currently in <span class="chip">alpha</span> stage.
+    </p>
+    <p>
+      It provides the features expected from a modern calculator while keeping
+      the interface clean.
+    </p>
+
+    <h2>Features</h2>
+    <div class="image-grid">
+      <section>
+        <h3>Straightforward</h3>
+        <img src="/images/apps/calculator/screen_downloads_01.png" alt="Liri Calculator main view" />
+        <p>A calculator that gets out of your way.</p>
+      </section>
+      <section>
+        <h3>Solid</h3>
+        <img src="/images/apps/calculator/screen_downloads_02.png" alt="Liri Calculator advanced view" />
+        <p>Basic and scientific calculations are covered.</p>
+      </section>
+    </div>
+
+    <h2>Contribute</h2>
+    <p>
+      Contributions can include design, code, translations, bug reports, and
+      testing.
+    </p>
+
+    <h3>Design</h3>
+    <p>
+      Start with the
+      <a href="https://github.com/lirios/calculator/issues?q=is%3Aissue+is%3Aopen+label%3A%22needs+design%22">GitHub issue list</a>.
+    </p>
+
+    <h3>Code</h3>
+    <p>
+      Liri Calculator is written using Qt, C++, and QML. QtQuick Controls 2 and
+      <a href="https://github.com/lirios/fluid">Fluid</a> provide the Material
+      Design interface.
+    </p>
+    <pre><code>git clone https://github.com/lirios/calculator</code></pre>
+    <md-filled-tonal-button href="https://github.com/lirios/calculator">Fork on GitHub</md-filled-tonal-button>
+
+    <h3>Translations</h3>
+    <p>Help translate Liri Calculator into your language.</p>
+    <md-filled-button href="/get-involved/">Get Involved</md-filled-button>
+  </article>
+</SiteLayout>

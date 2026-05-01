@@ -1,23 +1,26 @@
-Liri Web site
-=============
+# Liri Web Site
 
-This Liri Web site is based on [Jekyll](https://jekyllrb.com/).
+This Liri Web site is built with [Astro](https://astro.build/) and
+[Material Web Components](https://material-web.dev/).
 
-## Development setup
+## Development Setup
 
-Install the following stuff, if the first time:
+Install dependencies:
 
 ```sh
-gem install bundler
-cd lirios.github.io
-bundle install
+npm install
 ```
 
 Serve the pages locally with:
 
 ```sh
-cd lirios.github.io
-bundle exec jekyll serve
+npm run dev
+```
+
+Build the static site:
+
+```sh
+npm run build
 ```
 
 ## Delivery

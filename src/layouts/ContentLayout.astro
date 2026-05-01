@@ -1,0 +1,13 @@
+---
+import SiteLayout from './SiteLayout.astro';
+
+const frontmatter = Astro.props.frontmatter ?? {};
+---
+
+<SiteLayout title={frontmatter.title} variant="content">
+  <div class="ribbon" aria-hidden="true"></div>
+  <article class="content-surface prose">
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </article>
+</SiteLayout>

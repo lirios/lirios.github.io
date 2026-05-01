@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '@components/PostCard.astro';
+import SiteLayout from '@layouts/SiteLayout.astro';
+import { sortedPosts } from '@utils/posts';
+
+const posts = sortedPosts(await getCollection('posts'));
+---
+
+<SiteLayout title="News" variant="centered">
+  <header class="page-heading">
+    <p class="eyebrow">Liri Project</p>
+    <h1>News</h1>
+    <p>Project announcements, release notes, and community updates.</p>
+  </header>
+
+  <section class="section-band">
+    <div class="section-inner">
+      <div class="grid two">
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+    </div>
+  </section>
+</SiteLayout>

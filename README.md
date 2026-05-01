@@ -31,5 +31,5 @@ The web site is automatically built from the `develop`
 branch and can be seen at [lirios.github.io](https://lirios.github.io/).
 
 If everything is fine we can finally merge `develop` into
-`master` then push. The web site at [liri.io](https://liri.io)
-is automatically published.
+`main` then GitHub actions will publish on [liri.io](https://liri.io)
+automatically.

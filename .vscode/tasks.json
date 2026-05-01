@@ -1,33 +1,31 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
-    "version": "0.1.0",
+    "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "build",
-            "command": "bundle",
-            "isShellCommand": true,
-            "isBuildCommand": true,
-            "args": [
-                "exec",
-                "jekyll",
-                "build"
-            ],
-            "showOutput": "always",
-            "echoCommand": true
+            "label": "build",
+            "type": "npm",
+            "script": "build",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
-            "taskName": "serve",
-            "command": "bundle",
-            "isShellCommand": true,
+            "label": "dev",
+            "type": "npm",
+            "script": "dev",
             "isBackground": true,
-            "args": [
-                "exec",
-                "jekyll",
-                "serve"
-            ],
-            "showOutput": "always",
-            "echoCommand": true
+            "problemMatcher": []
+        },
+        {
+            "label": "preview",
+            "type": "npm",
+            "script": "preview",
+            "isBackground": true,
+            "problemMatcher": []
         }
     ]
 }

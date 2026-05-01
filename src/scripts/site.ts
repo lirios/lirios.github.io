@@ -42,7 +42,11 @@ const initTabs = () => {
     };
 
     tabs.addEventListener('change', syncPanels);
-    syncPanels();
+
+    // md-tabs is a Lit component; wait for its first render before syncing so
+    // that activeTabIndex reflects the `active` attribute on the first tab.
+    const updateComplete = (tabs as unknown as { updateComplete?: Promise<boolean> }).updateComplete;
+    (updateComplete ?? Promise.resolve()).then(syncPanels);
   });
 };
 
